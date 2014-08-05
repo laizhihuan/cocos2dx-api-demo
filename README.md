@@ -14,16 +14,19 @@ http://www.jikexueyuan.com/
 
 ### 操作说明 
 
-* cocos2dx 创建project的命令
-
+* cocos2dx 创建project的命令	
+	
 ```
-	cd tools/cocos2d-console/bin/
-	sudo python cocos.py new -p com.kojavaee.game -l cpp -d ~/Documents/c++workspace/	
-```	
+cd tools/cocos2d-console/bin/
+sudo python cocos.py new -p com.kojavaee.game -l cpp -d ~/Documents/c++workspace/
+```
+    
+    
 * cocos2dx之GUI实例
 
+
 # License
-----
+---
 Copyright (C) 2013 FIXME
 
 Distributed under the Eclipse Public License, the same as Clojure.
