@@ -19,10 +19,8 @@ http://www.jikexueyuan.com/
 ```
 cd tools/cocos2d-console/bin/
 sudo python cocos.py new -p com.kojavaee.game -l cpp -d ~/Documents/c++workspace/
-```
-    
-    
-* cocos2dx之GUI实例
+```    
+* cocos2dx GUI实例
 
 
 # License

@@ -46,7 +46,11 @@ bool HelloWorld::init()
     listener->onTouchBegan = [label](Touch *t,Event *event) {
         if(label->getBoundingBox().containsPoint(t->getLocation())) {
             log("click show the image sence");
-            Director::getInstance()->replaceScene(HiImageSence::createSence());
+            //普通的切换场景的效果
+            //Director::getInstance()->replaceScene(HiImageSence::createSence());
+            
+            //添加动画效果
+            Director::getInstance()->replaceScene(TransitionJumpZoom::create(3, HiImageSence::createSence()));
         }
         return false;
     };

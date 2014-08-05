@@ -20,8 +20,11 @@ Scene* HiImageSence::createSence() {
 
 bool HiImageSence::init() {
     Size size = Director::getInstance()->getVisibleSize();
+    
     Sprite *s = Sprite::create("HelloWorld.png");
+    
     s->setPosition(Vec2(size.width/2, size.height/2));
+    
     addChild(s);
     
     return true;
