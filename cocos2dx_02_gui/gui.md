@@ -34,7 +34,11 @@
     addEventListenerWithSceneGraphPriority(listener, label);
 ```
 #### 2.用户输入事件
-触摸事件
-用户触摸事件demo,详细请看:HiTouchScene.cpp
+
+1.用户触摸事件
+
+在处理触摸事件时，既可以重写三个方法`onTouchBegan`,`onTouchMoved`和`onTouchEnded`，也可以直接通过Lambda表达式完成响应逻辑。
+
+用户触摸事件demo,详细请看:[HiTouchScene.cpp](https://github.com/laizhihuan/cocos2dx-api-demo/blob/master/cocos2dx_02_gui/MyCppGame/Classes/HiTouchSence.cpp)
 
 
