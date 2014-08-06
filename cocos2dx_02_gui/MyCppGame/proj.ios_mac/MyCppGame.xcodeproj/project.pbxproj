@@ -27,6 +27,8 @@
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		4359EEAD1990CF6E00233AA7 /* HiImageSence.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4359EEAB1990CF6E00233AA7 /* HiImageSence.cpp */; };
 		4359EEB01990D81000233AA7 /* HiImageSence.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4359EEAB1990CF6E00233AA7 /* HiImageSence.cpp */; };
+		4359EEB31992152500233AA7 /* HiTouchSence.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4359EEB11992152500233AA7 /* HiTouchSence.cpp */; };
+		4359EEB4199217A800233AA7 /* HiTouchSence.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4359EEB11992152500233AA7 /* HiTouchSence.cpp */; };
 		503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 503AE0F617EB97AB00D1A890 /* Icon.icns */; };
 		503AE10017EB989F00D1A890 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FB17EB989F00D1A890 /* AppController.mm */; };
 		503AE10117EB989F00D1A890 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FC17EB989F00D1A890 /* main.m */; };
@@ -232,6 +234,8 @@
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		4359EEAB1990CF6E00233AA7 /* HiImageSence.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HiImageSence.cpp; path = ../Classes/HiImageSence.cpp; sourceTree = "<group>"; };
 		4359EEAC1990CF6E00233AA7 /* HiImageSence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HiImageSence.h; path = ../Classes/HiImageSence.h; sourceTree = "<group>"; };
+		4359EEB11992152500233AA7 /* HiTouchSence.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HiTouchSence.cpp; path = ../Classes/HiTouchSence.cpp; sourceTree = "<group>"; };
+		4359EEB21992152500233AA7 /* HiTouchSence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HiTouchSence.h; path = ../Classes/HiTouchSence.h; sourceTree = "<group>"; };
 		503AE0F617EB97AB00D1A890 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
 		503AE0F717EB97AB00D1A890 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		503AE0FA17EB989F00D1A890 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = ios/AppController.h; sourceTree = SOURCE_ROOT; };
@@ -346,6 +350,8 @@
 				1AFAF8B616D35DE700DB1158 /* HelloWorldScene.h */,
 				4359EEAB1990CF6E00233AA7 /* HiImageSence.cpp */,
 				4359EEAC1990CF6E00233AA7 /* HiImageSence.h */,
+				4359EEB11992152500233AA7 /* HiTouchSence.cpp */,
+				4359EEB21992152500233AA7 /* HiTouchSence.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -676,6 +682,7 @@
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
+				4359EEB31992152500233AA7 /* HiTouchSence.cpp in Sources */,
 				4359EEAD1990CF6E00233AA7 /* HiImageSence.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */,
@@ -686,6 +693,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4359EEB4199217A800233AA7 /* HiTouchSence.cpp in Sources */,
 				4359EEB01990D81000233AA7 /* HiImageSence.cpp in Sources */,
 				5087E75717EB910900C73F5D /* AppDelegate.cpp in Sources */,
 				5087E75817EB910900C73F5D /* HelloWorldScene.cpp in Sources */,

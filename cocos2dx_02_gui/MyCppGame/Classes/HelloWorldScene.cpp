@@ -1,5 +1,6 @@
 #include "HelloWorldScene.h"
 #include "HiImageSence.h"
+#include "HiTouchSence.h"
 USING_NS_CC;
 
 Scene* HelloWorld::createScene()
@@ -33,10 +34,11 @@ bool HelloWorld::init()
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
+    //--------------却换场景------------------------
     Label *label = Label::create();
     label->setString("show the image sence");
     label->setPosition(Vec2(origin.x + visibleSize.width/2,
-                            origin.y + visibleSize.height - label->getContentSize().height));
+                            origin.y + visibleSize.height - 20));
     addChild(label);
     
     //添加监听器
@@ -57,6 +59,32 @@ bool HelloWorld::init()
     
     //注册监听器
     Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, label);
+    
+    //--------------------用户交互事件-----------------------------------------
+    auto *touchLabel = Label::create();
+    touchLabel->setString("show the touch sence");
+    touchLabel->setPosition(Vec2(origin.x + visibleSize.width/2,
+                                 origin.y + visibleSize.height - 40));
+    addChild(touchLabel);
+    
+    auto touchListener = EventListenerTouchOneByOne::create();
+
+    touchListener->onTouchBegan = [touchLabel](Touch *t,Event *event) {
+        if(touchLabel->getBoundingBox().containsPoint(t->getLocation())) {
+            log("click show the touch sence");
+            
+            Director::getInstance()->replaceScene(HiTouchSence::createScene());
+            //普通的切换场景的效果
+            //Director::getInstance()->replaceScene(HiImageSence::createSence());
+            
+            //添加动画效果
+            //Director::getInstance()->replaceScene(TransitionJumpZoom::create(3, HiImageSence::createSence()));
+        }
+        return false;
+    };
+    
+    Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(touchListener, touchLabel);
+    
     
     return true;
 }
