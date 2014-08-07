@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F9AF28F6-8603-4DF9-AB49-11BB2CDE2AC7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MyCppGame</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F7F52F36-42BF-436A-A3A3-185BA84CA797</key>
+		<string>ssh://github.com/laizhihuan/cocos2dx-api-demo.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>cocos2dx_04_2048/MyCppGame/proj.ios_mac/MyCppGame.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F7F52F36-42BF-436A-A3A3-185BA84CA797</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/laizhihuan/cocos2dx-api-demo.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F7F52F36-42BF-436A-A3A3-185BA84CA797</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F7F52F36-42BF-436A-A3A3-185BA84CA797</string>
+			<key>IDESourceControlWCCName</key>
+			<string>cocos2dx-api-demo</string>
+		</dict>
+	</array>
+</dict>
+</plist>
