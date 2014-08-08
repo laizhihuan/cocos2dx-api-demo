@@ -21,7 +21,7 @@ cd tools/cocos2d-console/bin/
 sudo python cocos.py new -p com.kojavaee.game -l cpp -d ~/Documents/c++workspace/
 ```    
 * cocos2dx GUI实例
-
+* cocos2dx 2048游戏
 
 # License
 ---
