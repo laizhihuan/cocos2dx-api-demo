@@ -2,9 +2,17 @@
 #define __HELLOWORLD_SCENE_H__
 
 #include "cocos2d.h"
+#include "Block.h"
+
+USING_NS_CC;
 
 class HelloWorld : public cocos2d::Layer
 {
+private:
+    Size visibleSize = Director::getInstance()->getVisibleSize();
+    int linesCount;
+    bool showEnd;  
+    
 public:
     // there's no 'id' in cpp, so we recommend returning the class instance pointer
     static cocos2d::Scene* createScene();
@@ -17,6 +25,16 @@ public:
     
     // implement the "static create()" method manually
     CREATE_FUNC(HelloWorld);
+    
+    void createStartLine();
+    
+    void createEndLine();
+    
+    void addLine(int lineIndex);
+    
+    void startGame();
+    
+    void moveDown();
 };
 
 #endif // __HELLOWORLD_SCENE_H__

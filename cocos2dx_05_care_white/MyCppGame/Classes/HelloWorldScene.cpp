@@ -27,52 +27,90 @@ bool HelloWorld::init()
         return false;
     }
     
-    Size visibleSize = Director::getInstance()->getVisibleSize();
-    Vec2 origin = Director::getInstance()->getVisibleOrigin();
-
-    /////////////////////////////
-    // 2. add a menu item with "X" image, which is clicked to quit the program
-    //    you may modify it.
-
-    // add a "close" icon to exit the progress. it's an autorelease object
-    auto closeItem = MenuItemImage::create(
-                                           "CloseNormal.png",
-                                           "CloseSelected.png",
-                                           CC_CALLBACK_1(HelloWorld::menuCloseCallback, this));
+    startGame();
     
-	closeItem->setPosition(Vec2(origin.x + visibleSize.width - closeItem->getContentSize().width/2 ,
-                                origin.y + closeItem->getContentSize().height/2));
-
-    // create menu, it's an autorelease object
-    auto menu = Menu::create(closeItem, NULL);
-    menu->setPosition(Vec2::ZERO);
-    this->addChild(menu, 1);
-
-    /////////////////////////////
-    // 3. add your codes below...
-
-    // add a label shows "Hello World"
-    // create and initialize a label
+    auto listener = EventListenerTouchOneByOne::create();
     
-    auto label = LabelTTF::create("Hello World", "Arial", 24);
+    listener->onTouchBegan = [this](Touch *t,Event *event) {
+        log("onTouch");
+        
+        auto bs = Block::getBlocks();
+        Block *b;
+        
+        for (auto it = bs->begin(); it!=bs->end(); it++) {
+            b = *it;
+            
+            if (b->getLineIndex() == 1 && b->getBoundingBox().containsPoint(t->getLocation())) {
+                
+                if (b->getColor() == Color3B::BLACK) {
+                    b->setColor(Color3B::GRAY);
+                    this->moveDown();
+                } else {
+                    MessageBox("GameOver", "fail");
+                }
+                
+            }
+            
+        }
+        
+        return false;
+    };
     
-    // position the label on the center of the screen
-    label->setPosition(Vec2(origin.x + visibleSize.width/2,
-                            origin.y + visibleSize.height - label->getContentSize().height));
-
-    // add the label as a child to this layer
-    this->addChild(label, 1);
-
-    // add "HelloWorld" splash screen"
-    auto sprite = Sprite::create("HelloWorld.png");
-
-    // position the sprite on the center of the screen
-    sprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
-
-    // add the sprite as a child to this layer
-    this->addChild(sprite, 0);
+    Director::getInstance()->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, this);
     
     return true;
+}
+
+void HelloWorld::moveDown() {
+    log("moveDown");
+    
+    addLine(4);
+    
+    auto bs = Block::getBlocks();
+    for (auto it=bs->begin(); it!=bs->end(); it++) {
+        (*it)->moveDown();
+    }
+}
+
+void HelloWorld::startGame() {
+    createStartLine();
+    
+    addLine(1);
+    addLine(2);
+    addLine(3);
+}
+
+void HelloWorld::addLine(int lineIndex) {
+    
+    Block *b;
+    int blockIndex = rand()%4;
+    
+    for (int i=0; i<4; i++) {
+        
+        b = Block::createWithArgs(blockIndex == i ? Color3B::BLACK : Color3B::WHITE,
+                       Size((visibleSize.width/4)-1,(visibleSize.height/4)-1),
+                       "",20,Color4B::BLACK);
+        
+        b->setPosition(Vec2(i*visibleSize.width/4, lineIndex*visibleSize.height/4));
+        
+        b->setLineIndex(lineIndex);
+        
+        addChild(b);
+    }
+    
+}
+
+void HelloWorld::createStartLine() {
+    auto b = Block::createWithArgs(Color3B::YELLOW,
+                                   Size(visibleSize.width,visibleSize.height/4), "", 20, Color4B::BLACK);
+    b->setLineIndex(0);
+    addChild(b);
+}
+
+void HelloWorld::createEndLine() {
+    auto b = Block::createWithArgs(Color3B::GREEN, visibleSize, "Game over", 36, Color4B::BLACK);
+    b->setLineIndex(4);
+    addChild(b);
 }
 
 
