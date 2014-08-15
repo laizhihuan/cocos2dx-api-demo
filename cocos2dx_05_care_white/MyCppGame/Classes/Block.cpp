@@ -69,11 +69,15 @@ void Block::moveDown() {
     
     Size visibleSize = Director::getInstance()->getVisibleSize();
     
-    runAction(Sequence::create(MoveTo::create(0.1f, Point(getPositionX(),lineIndex*visibleSize.height/4)),
+    runAction(Sequence::create(MoveTo::create(0.1f,
+                                              Point(getPositionX(),lineIndex*visibleSize.height/4)),
                                CallFunc::create([this](){
+        
+        //如果行索引小于零表示块已经不在屏幕内，可以移除
         if (lineIndex < 0) {
             this->removeBlock();
         }
+        
     }), NULL));
 }
 

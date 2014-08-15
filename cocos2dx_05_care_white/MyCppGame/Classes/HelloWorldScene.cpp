@@ -40,17 +40,23 @@ bool HelloWorld::init()
         for (auto it = bs->begin(); it!=bs->end(); it++) {
             b = *it;
             
+            //只有当前块行数是1的时候才进行交互
             if (b->getLineIndex() == 1 && b->getBoundingBox().containsPoint(t->getLocation())) {
                 
                 if (b->getColor() == Color3B::BLACK) {
+                    //点击黑块，将原色块进行修改，并将画面向下移动
                     b->setColor(Color3B::GRAY);
                     this->moveDown();
+                    
+                } else if(b->getColor()== Color3B::GREEN) {
+                    this->moveDown();
                 } else {
+                    //点击白块游戏结束
                     MessageBox("GameOver", "fail");
                 }
                 
+                break;
             }
-            
         }
         
         return false;
@@ -61,18 +67,26 @@ bool HelloWorld::init()
     return true;
 }
 
+//所有的卡片都向下移动
 void HelloWorld::moveDown() {
     log("moveDown");
     
-    addLine(4);
+    if (linesCount<10) {
+        addLine(4);
+    } else if(!showEnd)  {
+        createEndLine();
+        showEnd = true;
+    }
     
     auto bs = Block::getBlocks();
+    
     for (auto it=bs->begin(); it!=bs->end(); it++) {
         (*it)->moveDown();
     }
 }
 
 void HelloWorld::startGame() {
+    showEnd = false;
     createStartLine();
     
     addLine(1);
@@ -97,6 +111,8 @@ void HelloWorld::addLine(int lineIndex) {
         
         addChild(b);
     }
+    
+    linesCount++;
     
 }
 
