@@ -11,7 +11,11 @@ class HelloWorld : public cocos2d::Layer
 private:
     Size visibleSize = Director::getInstance()->getVisibleSize();
     int linesCount;
-    bool showEnd;  
+    bool showEnd;
+    Label *timerLabel;
+    Node *gameLayer;
+    bool timerRunning;
+    long startTime;
     
 public:
     // there's no 'id' in cpp, so we recommend returning the class instance pointer
@@ -35,6 +39,10 @@ public:
     void startGame();
     
     void moveDown();
+    
+    void startTimer();
+    void stopTimer();
+    virtual void update(float dt);
 };
 
 #endif // __HELLOWORLD_SCENE_H__

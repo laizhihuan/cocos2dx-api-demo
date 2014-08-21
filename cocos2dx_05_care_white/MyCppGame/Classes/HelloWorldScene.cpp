@@ -27,6 +27,20 @@ bool HelloWorld::init()
         return false;
     }
     
+    srand(time(NULL));
+    
+    gameLayer = Node::create();
+    addChild(gameLayer);
+    
+    Size visibleSize = Director::getInstance()->getVisibleSize();
+    
+    timerLabel = Label::create();
+    timerLabel->setTextColor(Color4B::BLUE);
+    timerLabel->setSystemFontSize(48);
+    timerLabel->setPosition(visibleSize.width/2,visibleSize.height - 100);
+    timerLabel->setString("0.000000");
+    addChild(timerLabel);
+    
     startGame();
     
     auto listener = EventListenerTouchOneByOne::create();
@@ -48,8 +62,14 @@ bool HelloWorld::init()
                     b->setColor(Color3B::GRAY);
                     this->moveDown();
                     
+                    if (!timerRunning) {
+                        this->startTimer();
+                    }
                 } else if(b->getColor()== Color3B::GREEN) {
+                    
                     this->moveDown();
+                    
+                    this->stopTimer();
                 } else {
                     //点击白块游戏结束
                     MessageBox("GameOver", "fail");
@@ -129,6 +149,27 @@ void HelloWorld::createEndLine() {
     addChild(b);
 }
 
+void HelloWorld::update(float dt) {
+    long offset = clock() - startTime;
+    
+    timerLabel->setString(StringUtils::format("%g",((double)offset)/1000000));
+}
+
+void HelloWorld::startTimer() {
+    if (!timerRunning) {
+        scheduleUpdate();
+        startTime = clock();
+        
+        timerRunning = true;
+    }
+}
+
+void HelloWorld::stopTimer() {
+    if (timerRunning) {
+        unscheduleUpdate();
+        timerRunning = false;
+    }
+}
 
 void HelloWorld::menuCloseCallback(Ref* pSender)
 {
