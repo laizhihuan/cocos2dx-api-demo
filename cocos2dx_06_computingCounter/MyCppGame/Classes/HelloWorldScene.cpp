@@ -73,7 +73,7 @@ bool HelloWorld::init()
 //    this->addChild(sprite, 0);
     
     buildUI();
-    
+    addListener();
     return true;
 }
 
@@ -82,13 +82,13 @@ void HelloWorld::buildUI() {
     aTF->setPosition(100,300);
     addChild(aTF);
     
-    auto addLable = Label::create();
-    addLable->setString("+");
-    addLable->setPosition(aTF->getPositionX()+50,aTF->getPositionY());
-    addChild(addLable);
+    addLabel = Label::create();
+    addLabel->setString("+");
+    addLabel->setPosition(aTF->getPositionX()+50,aTF->getPositionY());
+    addChild(addLabel);
     
     bTF = TextFieldTTF::textFieldWithPlaceHolder("Value", "Courier", 16);
-    bTF->setPosition(addLable->getPositionX()+50, addLable->getPositionY());
+    bTF->setPosition(addLabel->getPositionX()+50, addLabel->getPositionY());
     addChild(bTF);
     
     auto equalLable = Label::create();
@@ -96,15 +96,46 @@ void HelloWorld::buildUI() {
     equalLable->setPosition(bTF->getPositionX()+50,bTF->getPositionY());
     addChild(equalLable);
     
-    auto resultLable = Label::create();
-    resultLable->setPosition(resultLable->getPositionX()+50, resultLable->getPositionY());
-    addChild(resultLable);
+    resultLabel = Label::create();
+    resultLabel->setPosition(resultLabel->getPositionX()+50, resultLabel->getPositionY());
+    addChild(resultLabel);
     
-    auto addBtn = Label::create();
+    addBtn = Label::create();
     addBtn->setString("Add");
     addBtn->setSystemFontSize(16);
     addChild(addBtn);
     addBtn->setPosition(aTF->getPositionX(),aTF->getPositionY() - 50);
+}
+
+void HelloWorld::addListener() {
+    auto director = Director::getInstance();
+    
+    auto handler = [=] (Touch * t, Event * e) {
+        auto taget = e->getCurrentTarget();
+        
+        if(taget->getBoundingBox().containsPoint(t->getLocation())) {
+            if(taget == aTF) {
+                aTF->attachWithIME();
+            } else if (taget == bTF) {
+                bTF->attachWithIME();
+            } else if (taget == addBtn) {
+                log("click");
+            }
+        }
+        log("click-------");
+        
+        return false;
+    };
+    
+    auto addListenerToTarget = [director,handler](Node* target) {
+        auto l = EventListenerTouchOneByOne::create();
+        l->onTouchBegan = handler;
+        director->getEventDispatcher()->addEventListenerWithSceneGraphPriority(l, target);
+    };
+    
+    addListenerToTarget(addBtn);
+    addListenerToTarget(aTF);
+    addListenerToTarget(bTF);
 }
 
 

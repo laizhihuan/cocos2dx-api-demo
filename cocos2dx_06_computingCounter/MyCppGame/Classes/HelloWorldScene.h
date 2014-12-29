@@ -20,7 +20,15 @@ public:
 
 private:
     void buildUI();
+    
+    //text input
     cocos2d::TextFieldTTF * aTF, * bTF;
+    
+    //show label
+    cocos2d::Label * addLabel, * resultLabel, * addBtn;
+    
+    //添加事件处理
+    void addListener();
 };
 
 #endif // __HELLOWORLD_SCENE_H__
