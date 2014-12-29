@@ -17,6 +17,10 @@ public:
     
     // implement the "static create()" method manually
     CREATE_FUNC(HelloWorld);
+
+private:
+    void buildUI();
+    cocos2d::TextFieldTTF * aTF, * bTF;
 };
 
 #endif // __HELLOWORLD_SCENE_H__

@@ -35,44 +35,76 @@ bool HelloWorld::init()
     //    you may modify it.
 
     // add a "close" icon to exit the progress. it's an autorelease object
-    auto closeItem = MenuItemImage::create(
-                                           "CloseNormal.png",
-                                           "CloseSelected.png",
-                                           CC_CALLBACK_1(HelloWorld::menuCloseCallback, this));
+//    auto closeItem = MenuItemImage::create(
+//                                           "CloseNormal.png",
+//                                           "CloseSelected.png",
+//                                           CC_CALLBACK_1(HelloWorld::menuCloseCallback, this));
+//    
+//	closeItem->setPosition(Vec2(origin.x + visibleSize.width - closeItem->getContentSize().width/2 ,
+//                                origin.y + closeItem->getContentSize().height/2));
+//
+//    // create menu, it's an autorelease object
+//    auto menu = Menu::create(closeItem, NULL);
+//    menu->setPosition(Vec2::ZERO);
+//    this->addChild(menu, 1);
+//
+//    /////////////////////////////
+//    // 3. add your codes below...
+//
+//    // add a label shows "Hello World"
+//    // create and initialize a label
+//    
+//    auto label = LabelTTF::create("Hello World", "Arial", 24);
+//    
+//    // position the label on the center of the screen
+//    label->setPosition(Vec2(origin.x + visibleSize.width/2,
+//                            origin.y + visibleSize.height - label->getContentSize().height));
+//
+//    // add the label as a child to this layer
+//    this->addChild(label, 1);
+//
+//    // add "HelloWorld" splash screen"
+//    auto sprite = Sprite::create("HelloWorld.png");
+//
+//    // position the sprite on the center of the screen
+//    sprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
+//
+//    // add the sprite as a child to this layer
+//    this->addChild(sprite, 0);
     
-	closeItem->setPosition(Vec2(origin.x + visibleSize.width - closeItem->getContentSize().width/2 ,
-                                origin.y + closeItem->getContentSize().height/2));
-
-    // create menu, it's an autorelease object
-    auto menu = Menu::create(closeItem, NULL);
-    menu->setPosition(Vec2::ZERO);
-    this->addChild(menu, 1);
-
-    /////////////////////////////
-    // 3. add your codes below...
-
-    // add a label shows "Hello World"
-    // create and initialize a label
-    
-    auto label = LabelTTF::create("Hello World", "Arial", 24);
-    
-    // position the label on the center of the screen
-    label->setPosition(Vec2(origin.x + visibleSize.width/2,
-                            origin.y + visibleSize.height - label->getContentSize().height));
-
-    // add the label as a child to this layer
-    this->addChild(label, 1);
-
-    // add "HelloWorld" splash screen"
-    auto sprite = Sprite::create("HelloWorld.png");
-
-    // position the sprite on the center of the screen
-    sprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
-
-    // add the sprite as a child to this layer
-    this->addChild(sprite, 0);
+    buildUI();
     
     return true;
+}
+
+void HelloWorld::buildUI() {
+    aTF = TextFieldTTF::textFieldWithPlaceHolder("Value", "Courier", 16);
+    aTF->setPosition(100,300);
+    addChild(aTF);
+    
+    auto addLable = Label::create();
+    addLable->setString("+");
+    addLable->setPosition(aTF->getPositionX()+50,aTF->getPositionY());
+    addChild(addLable);
+    
+    bTF = TextFieldTTF::textFieldWithPlaceHolder("Value", "Courier", 16);
+    bTF->setPosition(addLable->getPositionX()+50, addLable->getPositionY());
+    addChild(bTF);
+    
+    auto equalLable = Label::create();
+    equalLable->setString("=");
+    equalLable->setPosition(bTF->getPositionX()+50,bTF->getPositionY());
+    addChild(equalLable);
+    
+    auto resultLable = Label::create();
+    resultLable->setPosition(resultLable->getPositionX()+50, resultLable->getPositionY());
+    addChild(resultLable);
+    
+    auto addBtn = Label::create();
+    addBtn->setString("Add");
+    addBtn->setSystemFontSize(16);
+    addChild(addBtn);
+    addBtn->setPosition(aTF->getPositionX(),aTF->getPositionY() - 50);
 }
 
 
