@@ -119,7 +119,10 @@ void HelloWorld::addListener() {
             } else if (taget == bTF) {
                 bTF->attachWithIME();
             } else if (taget == addBtn) {
-                log("click");
+                int a = __String::create(aTF->getString())->intValue();
+                int b = __String::create(bTF->getString())->intValue();
+                
+                resultLabel->setString(StringUtils::format("%d",a+b));
             }
         }
         log("click-------");
