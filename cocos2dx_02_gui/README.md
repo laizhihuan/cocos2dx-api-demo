@@ -35,10 +35,43 @@
 ```
 #### 2.用户输入事件
 
-1.用户触摸事件
+#####2.1.用户触摸事件
 
 在处理触摸事件时，既可以重写三个方法`onTouchBegan`,`onTouchMoved`和`onTouchEnded`，也可以直接通过Lambda表达式完成响应逻辑。
 
 用户触摸事件demo,详细请看:[HiTouchScene.cpp](https://github.com/laizhihuan/cocos2dx-api-demo/blob/master/cocos2dx_02_gui/MyCppGame/Classes/HiTouchSence.cpp)
 
+#### 3.常用控件
+
+* Director:     是用来却换Scene,
+* Scene:        管理游戏元素，eg: Layer，Label，Sprite....
+* Sprite:       cocos2dx中图像相关的呈现控件
+* Log:          cocos2dx跨平台日志输出,ios,android,win都是通用
+* MessageBox:   cocos2dx的对话框,游戏开发中少用，一般都是用自定义的对话框
+* LabelTTF:     文本显示（输出）标签
+* TextFieldTTF: 文本输入标签,首先添加一个监听器,然后连接IME(输入法)
+
+```c   
+	
+	Size size = Director::getInstance()->getVisibleSize();
+	
+	Sprite *s=Sprite::create("img.jpg");
+	s->setAnchorPoint(Point(0,0));
+	addChild(s);
+	
+	MessageBox("message content","message title");
+	
+	LabelTTF *label = LabelTTF::create();
+	label->setString("hi label");
+	label->setFontSize(36);
+	label->setPosition(size.width/2,size.height/2);
+	addChild(label);
+	
+	TextFieldTTF *txt = TextFieldTTF::create();
+	txt->setString("hi text");
+	txt->setFontSize(36);
+	txt->setPosition(size.width/2,size.height/2);
+	addChild(label);
+	
+```   
 
