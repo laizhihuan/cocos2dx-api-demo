@@ -33,6 +33,7 @@
     Director::getInstance()->getEventDispatcher()->
     addEventListenerWithSceneGraphPriority(listener, label);
 ```
+
 #### 2.用户输入事件
 
 #####2.1.用户触摸事件
@@ -51,6 +52,7 @@
 * LabelTTF:     文本显示（输出）标签
 * TextFieldTTF: 文本输入标签,首先添加一个监听器,然后连接IME(输入法)
 
+       
 ```c   
 	
 	Size size = Director::getInstance()->getVisibleSize();
@@ -74,4 +76,14 @@
 	addChild(label);
 	
 ```   
+
+#### 4.自定义类
+* 自定义类:       
+* 引入`#include <cocos2d.h>` 
+* 使用`USING_NS_CC;` 
+* 定义默认方法`virtual bool init();` 
+* 使用宏创建类`CREATE_FUNC(HiImageSence)`
+
+#### 5.内存管理
+
 
