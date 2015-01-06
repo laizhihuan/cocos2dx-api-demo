@@ -115,10 +115,21 @@
 		CCFloat tx, ty;
 		static const AffineTransform IDENTITY;//默认 AffineTransform
 	}
-	//定义包括a、b、c、d、t、t，它们在矩阵中的位置,如下所示:(参数对应矩阵位置)
+	//定义包括a、b、c、d、tx、ty，它们在矩阵中的位置,如下所示:(参数对应矩阵位置)
 	|-     -|
 	|a  b  0|  
 	|c  d  0|
 	|tx ty 0|
 	|-     -|
 ```
+
+#### 7.Cocos2D-X 3.0的渲染顺序
+
+* 主线程调用drawScene开始绘制场景;
+* 递归地遍历场景的子节点，即调用visit函数;
+* 调用每一个节点的绘制函数draw函数;
+* 初始化渲染命令会把这个对象（即QuadCommand对象）放进渲染队列里;
+
+渲染逻辑：首先进一步处理渲染命令，包括自动裁剪和自动批处理，处理完成后执行渲染命令。
+
+
