@@ -51,7 +51,8 @@
 * MessageBox:   cocos2dx的对话框,游戏开发中少用，一般都是用自定义的对话框
 * LabelTTF:     文本显示（输出）标签
 * TextFieldTTF: 文本输入标签,首先添加一个监听器,然后连接IME(输入法)
-
+* Menu:         菜单的使用
+* TableView:    cocos2dx列表的使用
        
 ```c   
 	
@@ -75,14 +76,21 @@
 	txt->setPosition(size.width/2,size.height/2);
 	addChild(label);
 	
+	auto menu = Menu::create(
+					MenuItemImage::create("normal.png","selected.png",[](Object* obj){log("menu item touched")
+					}),NULL);
+	addChild(menu);
+	
+	
+	
 ```   
 
 #### 4.自定义类
 * 自定义类:       
-* 引入`#include <cocos2d.h>` 
-* 使用`USING_NS_CC;` 
-* 定义默认方法`virtual bool init();` 
-* 使用宏创建类`CREATE_FUNC(HiImageSence)`
+* 引入        `#include <cocos2d.h>` 
+* 使用        `USING_NS_CC;` 
+* 定义默认方法 `virtual bool init();` 
+* 使用宏创建类 `CREATE_FUNC(HiImageSence)`
 
 #### 5.内存管理
 
