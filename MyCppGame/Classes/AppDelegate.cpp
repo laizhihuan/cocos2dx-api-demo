@@ -11,6 +11,7 @@ AppDelegate::~AppDelegate()
 {
 }
 
+// cocos2dx 程序公共代码真正的入口
 bool AppDelegate::applicationDidFinishLaunching() {
     // initialize director
     auto director = Director::getInstance();

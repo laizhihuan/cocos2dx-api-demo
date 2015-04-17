@@ -2,6 +2,7 @@
 
 USING_NS_CC;
 
+//是cocos渲染树的根节点，是一个独立游戏逻辑模块的封装
 Scene* HelloWorld::createScene()
 {
     // 'scene' is an autorelease object
@@ -68,7 +69,10 @@ bool HelloWorld::init()
 
     // position the sprite on the center of the screen
     sprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
-
+    
+    //放大2倍
+    sprite->setScale(2);
+    
     // add the sprite as a child to this layer
     this->addChild(sprite, 0);
     
