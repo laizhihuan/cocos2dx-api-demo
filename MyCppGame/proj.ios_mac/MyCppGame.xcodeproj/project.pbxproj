@@ -27,6 +27,8 @@
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		434BF6641AE0A57A002B8E11 /* SceneSecond.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 434BF6631AE0A57A002B8E11 /* SceneSecond.cpp */; };
 		434BF6651AE0A57A002B8E11 /* SceneSecond.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 434BF6631AE0A57A002B8E11 /* SceneSecond.cpp */; };
+		434BF66F1AE51AFC002B8E11 /* MyTouch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 434BF66E1AE51AFC002B8E11 /* MyTouch.cpp */; };
+		434BF6701AE51AFC002B8E11 /* MyTouch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 434BF66E1AE51AFC002B8E11 /* MyTouch.cpp */; };
 		503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 503AE0F617EB97AB00D1A890 /* Icon.icns */; };
 		503AE10017EB989F00D1A890 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FB17EB989F00D1A890 /* AppController.mm */; };
 		503AE10117EB989F00D1A890 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FC17EB989F00D1A890 /* main.m */; };
@@ -232,6 +234,8 @@
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		434BF6631AE0A57A002B8E11 /* SceneSecond.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SceneSecond.cpp; path = ../Classes/SceneSecond.cpp; sourceTree = "<group>"; };
 		434BF6681AE0A59F002B8E11 /* SceneSecond.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SceneSecond.h; path = ../Classes/SceneSecond.h; sourceTree = "<group>"; };
+		434BF66D1AE51AE7002B8E11 /* MyTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyTouch.h; path = ../Classes/MyTouch.h; sourceTree = "<group>"; };
+		434BF66E1AE51AFC002B8E11 /* MyTouch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyTouch.cpp; path = ../Classes/MyTouch.cpp; sourceTree = "<group>"; };
 		503AE0F617EB97AB00D1A890 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
 		503AE0F717EB97AB00D1A890 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		503AE0FA17EB989F00D1A890 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = ios/AppController.h; sourceTree = SOURCE_ROOT; };
@@ -346,6 +350,8 @@
 				1AFAF8B616D35DE700DB1158 /* HelloWorldScene.h */,
 				434BF6631AE0A57A002B8E11 /* SceneSecond.cpp */,
 				434BF6681AE0A59F002B8E11 /* SceneSecond.h */,
+				434BF66D1AE51AE7002B8E11 /* MyTouch.h */,
+				434BF66E1AE51AFC002B8E11 /* MyTouch.cpp */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -674,6 +680,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				434BF6641AE0A57A002B8E11 /* SceneSecond.cpp in Sources */,
+				434BF66F1AE51AFC002B8E11 /* MyTouch.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
@@ -690,6 +697,7 @@
 				5087E75817EB910900C73F5D /* HelloWorldScene.cpp in Sources */,
 				434BF6651AE0A57A002B8E11 /* SceneSecond.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
+				434BF6701AE51AFC002B8E11 /* MyTouch.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

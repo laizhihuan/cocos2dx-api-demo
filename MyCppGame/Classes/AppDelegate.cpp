@@ -1,6 +1,7 @@
 #include "AppDelegate.h"
 #include "HelloWorldScene.h"
 #include "SceneSecond.h"
+#include "MyTouch.h"
 
 USING_NS_CC;
 
@@ -31,7 +32,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // create a scene. it's an autorelease object
 //    auto scene = HelloWorld::createScene();
     //仿照helloworld创建自己的scene
-    auto scene = SceneSecond::createScene();
+//    auto scene = SceneSecond::createScene();
+    auto scene = MyTouch::createScene();
     
     // run
     director->runWithScene(scene);
