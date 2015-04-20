@@ -31,7 +31,34 @@ Scene* MyTouch::createScene()
 bool MyTouch::init()
 {
     //游戏的touch事件
+    Layer::init();
     
+    setTouchEnabled(true);
+    
+    setTouchMode(kCCTouchesOneByOne);
     
     return true;
 }
+
+bool MyTouch::onTouchBegan(Touch *touch, Event *unused_event)
+{
+    log("MyTouch::onTouchBegan");
+    return true;
+}
+
+void MyTouch::onTouchMoved(Touch *touch, Event *unused_event)
+{
+    log("MyTouch::onTouchMoved");
+};
+
+void MyTouch::onTouchEnded(Touch *touch, Event *unused_event)
+{
+    log("MyTouch::onTouchEnded");
+};
+
+void MyTouch::onTouchCancelled(Touch *touch, Event *unused_event)
+{
+    log("MyTouch::onTouchCancelled");
+};
+
+
