@@ -2,6 +2,7 @@
 #include "HelloWorldScene.h"
 #include "SceneSecond.h"
 #include "MyTouch.h"
+#include "MyDragNode.h"
 
 USING_NS_CC;
 
@@ -33,7 +34,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
 //    auto scene = HelloWorld::createScene();
     //仿照helloworld创建自己的scene
 //    auto scene = SceneSecond::createScene();
-    auto scene = MyTouch::createScene();
+//    auto scene = MyTouch::createScene();
+    auto scene = MyDragNode::createScene();
     
     // run
     director->runWithScene(scene);
