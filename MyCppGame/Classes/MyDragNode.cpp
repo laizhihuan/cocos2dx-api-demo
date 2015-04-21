@@ -36,13 +36,16 @@ bool MyDragNode::init()
     //游戏的touch事件
     Layer::init();
     
+    //创建一个精灵节点
     auto sprite = Sprite::create("CloseNormal.png");
     addChild(sprite);
     sprite->setPosition(ccp(100,100));
     
+    //注册触摸事件
     setTouchEnabled(true);
     setTouchMode(kCCTouchesOneByOne);
     
+    //通过成员变量，使其他方法可以访问精灵节点
     _sprite = sprite;
     
     return true;
@@ -51,6 +54,7 @@ bool MyDragNode::init()
 bool MyDragNode::onTouchBegan(Touch *touch, Event *unused_event)
 {
     log("MyDragNode::onTouchBegan");
+    //判断是否对精灵节点进行了触摸
     Rect rect = _sprite->boundingBox();
     Point pt = touch->getLocation();
     return rect.containsPoint(pt);
@@ -59,6 +63,7 @@ bool MyDragNode::onTouchBegan(Touch *touch, Event *unused_event)
 void MyDragNode::onTouchMoved(Touch *touch, Event *unused_event)
 {
     log("MyDragNode::onTouchMoved");
+    //拖动精灵节点到新的目标节点
     Point delta = touch->getDelta();
     Point oldPos = _sprite->getPosition();
     Point newPos = oldPos + delta;
