@@ -7,8 +7,8 @@
 //
 
 
-#ifndef __MYDRAGNODE_
-#define __MYDRAGNODE_
+#ifndef __MYCood_
+#define __MYCood_
 
 #include "cocos2d.h"
 

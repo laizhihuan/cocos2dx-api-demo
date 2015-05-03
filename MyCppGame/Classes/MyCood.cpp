@@ -6,10 +6,7 @@
 //
 //
 
-
 #include "MyCood.h"
-
-
 
 USING_NS_CC;
 
@@ -39,4 +36,3 @@ bool MyCood::init()
     
     return true;
 }
-
