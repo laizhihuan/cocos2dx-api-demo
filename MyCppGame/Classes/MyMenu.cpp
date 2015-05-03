@@ -7,6 +7,10 @@
 //
 
 #include "MyMenu.h"
+#include "HelloWorldScene.h"
+#include "SceneSecond.h"
+#include "MyTouch.h"
+#include "MyDragNode.h"
 
 USING_NS_CC;
 
@@ -59,5 +63,30 @@ bool MyMenu::init()
 
 void MyMenu::menuCallback(CCObject* sender) {
     log("click menucallback....");
+    
+    Node* node = (Node*)sender;
+    int tag = node->getTag()-1000;
+    
+    Scene* playScene = NULL;
+    switch (tag) {
+        case 0:
+            playScene = HelloWorld::createScene();
+            break;
+        case 1:
+            playScene = SceneSecond::createScene();
+            break;
+        case 2:
+            playScene = MyTouch::createScene();
+            break;
+        case 3:
+            playScene = MyDragNode::createScene();
+            break;
+        default:
+            break;
+    }
+    if (playScene) {
+        Director::sharedDirector()->replaceScene(playScene);
+    }
+    
 }
 
