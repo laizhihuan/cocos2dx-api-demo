@@ -85,10 +85,21 @@ void MyMenu::menuCallback(CCObject* sender) {
         case 3:
             playScene = MyDragNode::createScene();
             break;
-        case 4 :
-            //playScene = ErasableLayer()
-            //FIXME
-            log("click erasable.....");
+        case 4:
+            playScene = SceneSecond::createScene();
+            if (playScene) {
+                //遮照层
+                auto maskLayer = LayerColor::create(Color4B(0,0,255,200));
+                maskLayer->setContentSize(playScene->getContentSize());
+                
+                //创建可擦除的layer
+                auto layer= ErasableLayer::create(maskLayer, "eraser.png");
+                auto visibleSize = playScene->getContentSize();
+                layer->setPosition(Vec2(visibleSize.width/4,visibleSize.height/4));
+                playScene->addChild(layer);
+            }
+            //auto maskLayer = LayerColor::create(Color4B(0,0,255,200));
+            //log("click erasable.....");
             break;
         default:
             break;
