@@ -29,6 +29,8 @@ Scene* SceneSecond::createScene()
 // on "init" you need to initialize your instance
 bool SceneSecond::init()
 {
+    MyCommonLayer::init();
+
     // add "HelloWorld" splash screen"，游戏的元素依靠精灵来
     auto sprite = Sprite::create("HelloWorld.png");
     

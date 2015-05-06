@@ -31,7 +31,7 @@ Scene* MyCood::createScene()
 bool MyCood::init()
 {
     //游戏的touch事件
-    Layer::init();
+     MyCommonLayer::init();
     
     
     return true;

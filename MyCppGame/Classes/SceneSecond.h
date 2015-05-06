@@ -9,10 +9,11 @@
 #define __SCENESECOND_H__
 
 #include "cocos2d.h"
+#include "MyCommonLayer.h"
 
 USING_NS_CC;
 
-class SceneSecond : public cocos2d::Layer
+class SceneSecond : public MyCommonLayer
 {
 public:
     static cocos2d::Scene* createScene();

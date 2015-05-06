@@ -10,10 +10,11 @@
 #define __MYTOUCH_H__
 
 #include "cocos2d.h"
+#include "MyCommonLayer.h"
 
 USING_NS_CC;
 
-class MyTouch : public cocos2d::Layer
+class MyTouch : public MyCommonLayer
 {
 public:
     static cocos2d::Scene* createScene();

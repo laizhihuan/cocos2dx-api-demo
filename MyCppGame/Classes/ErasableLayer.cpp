@@ -71,7 +71,7 @@ ErasableLayer* ErasableLayer::create(const char* layerPath, Sprite* erasa)
 
 bool ErasableLayer::init(Node *layer, Sprite* erasa){
     
-    if (!Layer::init())
+    if (! MyCommonLayer::init())
     {
         return false;
     }

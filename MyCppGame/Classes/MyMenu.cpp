@@ -98,12 +98,11 @@ void MyMenu::menuCallback(CCObject* sender) {
                 layer->setPosition(Vec2(visibleSize.width/4,visibleSize.height/4));
                 playScene->addChild(layer);
             }
-            //auto maskLayer = LayerColor::create(Color4B(0,0,255,200));
-            //log("click erasable.....");
             break;
         default:
             break;
     }
+    
     if (playScene) {
         Director::sharedDirector()->replaceScene(playScene);
     }

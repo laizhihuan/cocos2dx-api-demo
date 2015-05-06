@@ -10,14 +10,15 @@
 #define __MyCppGame__ErasableLayer__
 
 #include "cocos2d.h"
+#include "MyCommonLayer.h"
 
 USING_NS_CC;
 
 /**
  *  可擦除的Layer,http://blog.csdn.net/linchaolong
  */
-class ErasableLayer :public Layer {
-
+class ErasableLayer :public MyCommonLayer
+{
 public:
     // 创建ErasableLayer
     //1.遮罩层

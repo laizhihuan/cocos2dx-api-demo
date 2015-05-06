@@ -10,10 +10,11 @@
 #define __MYDRAGNODE_
 
 #include "cocos2d.h"
+#include "MyCommonLayer.h"
 
 USING_NS_CC;
 
-class MyDragNode : public cocos2d::Layer
+class MyDragNode : public MyCommonLayer
 {
 public:
     static cocos2d::Scene* createScene();

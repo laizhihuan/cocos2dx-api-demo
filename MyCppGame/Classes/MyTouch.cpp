@@ -31,7 +31,7 @@ Scene* MyTouch::createScene()
 bool MyTouch::init()
 {
     //游戏的touch事件
-    Layer::init();
+    MyCommonLayer::init();
     
     setTouchEnabled(true);
     
