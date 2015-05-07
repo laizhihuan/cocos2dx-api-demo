@@ -51,7 +51,7 @@ bool MyMenu::init()
     Layer::init();
     
     //根据数组动态的创建menu
-    auto* myMenu = Menu::create();
+    Menu* myMenu = Menu::create();
     
     for (int i=0; i<sizeof(_menuArr)/sizeof(*_menuArr); ++i) {
         auto* item = MenuItemFont::create(_menuArr[i]);
@@ -63,7 +63,11 @@ bool MyMenu::init()
     addChild(myMenu);
     
     myMenu->alignItemsVertically();
-    
+    _menu = myMenu;
+	//
+	setTouchEnabled(true);
+	setTouchMode(kCCTouchesOneByOne);
+//    _menu = MyMenu;
     return true;
 }
 

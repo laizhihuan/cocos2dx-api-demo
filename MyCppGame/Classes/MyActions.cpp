@@ -75,5 +75,5 @@ void MyActions::menuCallback(CCObject* sender)
 	int tag = item->getTag() - 1000;
 	const char* actionName = _actionName[tag];
 	
-	//CCDirector::sharedDirector()->pushScene(ShowAction::scene(actionName));
+	CCDirector::sharedDirector()->replaceScene(ActionsDisplay::scene(actionName));
 }
