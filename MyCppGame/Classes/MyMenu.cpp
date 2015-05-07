@@ -113,7 +113,8 @@ void MyMenu::menuCallback(CCObject* sender) {
     }
     
     if (playScene) {
-        Director::sharedDirector()->replaceScene(playScene);
+        //Director::sharedDirector()->replaceScene(playScene);
+        Director::sharedDirector()->pushScene(playScene);
     }
 }
 

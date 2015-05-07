@@ -18,7 +18,7 @@ public:
     {
         Scene* scene = Scene::create();
         ActionsDisplay* layer = ActionsDisplay::create(actionName);
-        scene->addChild(scene);
+        scene->addChild(layer);
         return scene;
     }
     

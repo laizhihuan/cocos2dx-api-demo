@@ -33,7 +33,7 @@ bool MyCommonLayer::init()
 
 void MyCommonLayer::menuCallback(CCObject*)
 {
-    CCDirector::sharedDirector()->replaceScene(MyMenu::createScene());
-	//CCDirector::sharedDirector()->popScene();
+    //CCDirector::sharedDirector()->replaceScene(MyMenu::createScene());
+	CCDirector::sharedDirector()->popScene();
 }
 
