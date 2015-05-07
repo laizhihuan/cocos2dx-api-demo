@@ -41,6 +41,8 @@
 		435D0CBF1AF7965F0001AC0F /* eraser.png in Resources */ = {isa = PBXBuildFile; fileRef = 435D0CBD1AF7965F0001AC0F /* eraser.png */; };
 		435D0CC21AF9A6900001AC0F /* MyCommonLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 435D0CC01AF9A6900001AC0F /* MyCommonLayer.cpp */; };
 		435D0CC31AF9A6900001AC0F /* MyCommonLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 435D0CC01AF9A6900001AC0F /* MyCommonLayer.cpp */; };
+		435D0CC61AFB0AD20001AC0F /* MyActions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 435D0CC41AFB0AD20001AC0F /* MyActions.cpp */; };
+		435D0CC71AFB0AD20001AC0F /* MyActions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 435D0CC41AFB0AD20001AC0F /* MyActions.cpp */; };
 		503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 503AE0F617EB97AB00D1A890 /* Icon.icns */; };
 		503AE10017EB989F00D1A890 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FB17EB989F00D1A890 /* AppController.mm */; };
 		503AE10117EB989F00D1A890 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FC17EB989F00D1A890 /* main.m */; };
@@ -259,6 +261,8 @@
 		435D0CBD1AF7965F0001AC0F /* eraser.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = eraser.png; path = ../../../../../Downloads/ErasableLayer/Resources/eraser.png; sourceTree = "<group>"; };
 		435D0CC01AF9A6900001AC0F /* MyCommonLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyCommonLayer.cpp; path = ../Classes/MyCommonLayer.cpp; sourceTree = "<group>"; };
 		435D0CC11AF9A6900001AC0F /* MyCommonLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyCommonLayer.h; path = ../Classes/MyCommonLayer.h; sourceTree = "<group>"; };
+		435D0CC41AFB0AD20001AC0F /* MyActions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyActions.cpp; path = ../Classes/MyActions.cpp; sourceTree = "<group>"; };
+		435D0CC51AFB0AD20001AC0F /* MyActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyActions.h; path = ../Classes/MyActions.h; sourceTree = "<group>"; };
 		503AE0F617EB97AB00D1A890 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
 		503AE0F717EB97AB00D1A890 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		503AE0FA17EB989F00D1A890 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = ios/AppController.h; sourceTree = SOURCE_ROOT; };
@@ -385,6 +389,8 @@
 				435D0CB51AF76F950001AC0F /* ErasableLayer.h */,
 				435D0CC01AF9A6900001AC0F /* MyCommonLayer.cpp */,
 				435D0CC11AF9A6900001AC0F /* MyCommonLayer.h */,
+				435D0CC41AFB0AD20001AC0F /* MyActions.cpp */,
+				435D0CC51AFB0AD20001AC0F /* MyActions.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -716,6 +722,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				434BF6641AE0A57A002B8E11 /* SceneSecond.cpp in Sources */,
+				435D0CC61AFB0AD20001AC0F /* MyActions.cpp in Sources */,
 				434BF6721AE5DE57002B8E11 /* MyDragNode.cpp in Sources */,
 				434BF66F1AE51AFC002B8E11 /* MyTouch.cpp in Sources */,
 				435D0CB61AF76F950001AC0F /* ErasableLayer.cpp in Sources */,
@@ -738,6 +745,7 @@
 				5087E75717EB910900C73F5D /* AppDelegate.cpp in Sources */,
 				435D0CC31AF9A6900001AC0F /* MyCommonLayer.cpp in Sources */,
 				5087E75817EB910900C73F5D /* HelloWorldScene.cpp in Sources */,
+				435D0CC71AFB0AD20001AC0F /* MyActions.cpp in Sources */,
 				434BF6771AE87AD2002B8E11 /* MyCood.cpp in Sources */,
 				434BF6651AE0A57A002B8E11 /* SceneSecond.cpp in Sources */,
 				434BF6731AE5DE57002B8E11 /* MyDragNode.cpp in Sources */,
