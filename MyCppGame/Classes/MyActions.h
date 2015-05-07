@@ -11,6 +11,48 @@
 
 #include "MyCommonLayer.h"
 
+class ActionsDisplay : public MyCommonLayer
+{
+public:
+    static Scene* scene(const char* actionName)
+    {
+        Scene* scene = Scene::create();
+        ActionsDisplay* layer = ActionsDisplay::create(actionName);
+        scene->addChild(scene);
+        return scene;
+    }
+    
+    static ActionsDisplay* create(const char* actionName)
+    {
+        ActionsDisplay* display = new ActionsDisplay();
+        display->init(actionName);
+        display->autorelease();
+        return display;
+    }
+    
+    bool init(const char* actionName)
+    {
+        MyCommonLayer::init();
+        
+        Action* action = NULL;
+        
+        CCSprite* sprite = CCSprite::create("CloseNormal.png");
+		addChild(sprite);
+		sprite->setPosition(ccp(240, 160));
+        
+        if(actionName == "CCMoveBy")
+        {
+            action = MoveBy::create(4,ccp(100,100));
+        }
+        
+        if(action)
+        {
+            sprite->runAction(action);
+        }
+        return true;
+    }
+};
+
 class MyActions : public MyCommonLayer
 {
 public:

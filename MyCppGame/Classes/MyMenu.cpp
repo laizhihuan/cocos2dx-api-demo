@@ -12,6 +12,7 @@
 #include "MyTouch.h"
 #include "MyDragNode.h"
 #include "ErasableLayer.h"
+#include "MyActions.h"
 
 USING_NS_CC;
 
@@ -23,7 +24,8 @@ static const char* _menuArr[] = {
     "SceneSecond.h",
     "MyTouch.h",
     "MyDragNode.h",
-    "ErasableLayer.h"
+    "ErasableLayer.h",
+    "MyActions.h"
 };
 
 //是cocos渲染树的根节点，是一个独立游戏逻辑模块的封装
@@ -98,6 +100,9 @@ void MyMenu::menuCallback(CCObject* sender) {
                 layer->setPosition(Vec2(visibleSize.width/4,visibleSize.height/4));
                 playScene->addChild(layer);
             }
+            break;
+        case 5:
+            playScene = MyActions::scene();
             break;
         default:
             break;
