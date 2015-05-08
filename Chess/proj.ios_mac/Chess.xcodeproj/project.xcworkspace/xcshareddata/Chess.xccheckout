@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4EAC2ACB-9AEB-462C-9034-5D4B842E1FF9</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Chess</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C61375CE-6A94-46E2-BD4D-F063C517662F</key>
+		<string>ssh://github.com/laizhihuan/cocos2dx-api-demo.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Chess/proj.ios_mac/Chess.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C61375CE-6A94-46E2-BD4D-F063C517662F</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/laizhihuan/cocos2dx-api-demo.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C61375CE-6A94-46E2-BD4D-F063C517662F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C61375CE-6A94-46E2-BD4D-F063C517662F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>cocos2dx-api-demo</string>
+		</dict>
+	</array>
+</dict>
+</plist>
