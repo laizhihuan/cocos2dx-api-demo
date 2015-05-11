@@ -115,6 +115,8 @@
 		43B748691AFC3FB200136931 /* zhanting.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 43B748111AFC3FB200136931 /* zhanting.jpg */; };
 		43B7486E1AFCDAC100136931 /* MainScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43B7486C1AFCDAC100136931 /* MainScene.cpp */; };
 		43B7486F1AFCDAC100136931 /* MainScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43B7486C1AFCDAC100136931 /* MainScene.cpp */; };
+		43B748721B003DE900136931 /* Common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43B748701B003DE900136931 /* Common.cpp */; };
+		43B748731B003DE900136931 /* Common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43B748701B003DE900136931 /* Common.cpp */; };
 		503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 503AE0F617EB97AB00D1A890 /* Icon.icns */; };
 		503AE10017EB989F00D1A890 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FB17EB989F00D1A890 /* AppController.mm */; };
 		503AE10117EB989F00D1A890 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FC17EB989F00D1A890 /* main.m */; };
@@ -364,6 +366,8 @@
 		43B748111AFC3FB200136931 /* zhanting.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = zhanting.jpg; sourceTree = "<group>"; };
 		43B7486C1AFCDAC100136931 /* MainScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MainScene.cpp; path = ../Classes/MainScene.cpp; sourceTree = "<group>"; };
 		43B7486D1AFCDAC100136931 /* MainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainScene.h; path = ../Classes/MainScene.h; sourceTree = "<group>"; };
+		43B748701B003DE900136931 /* Common.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Common.cpp; path = ../Classes/Common.cpp; sourceTree = "<group>"; };
+		43B748711B003DE900136931 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Common.h; path = ../Classes/Common.h; sourceTree = "<group>"; };
 		503AE0F617EB97AB00D1A890 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
 		503AE0F717EB97AB00D1A890 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		503AE0FA17EB989F00D1A890 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = ios/AppController.h; sourceTree = SOURCE_ROOT; };
@@ -478,6 +482,8 @@
 				1AFAF8B616D35DE700DB1158 /* HelloWorldScene.h */,
 				43B7486C1AFCDAC100136931 /* MainScene.cpp */,
 				43B7486D1AFCDAC100136931 /* MainScene.h */,
+				43B748701B003DE900136931 /* Common.cpp */,
+				43B748711B003DE900136931 /* Common.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -950,6 +956,7 @@
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */,
+				43B748721B003DE900136931 /* Common.cpp in Sources */,
 				43B7486E1AFCDAC100136931 /* MainScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -961,6 +968,7 @@
 				5087E75717EB910900C73F5D /* AppDelegate.cpp in Sources */,
 				43B7486F1AFCDAC100136931 /* MainScene.cpp in Sources */,
 				5087E75817EB910900C73F5D /* HelloWorldScene.cpp in Sources */,
+				43B748731B003DE900136931 /* Common.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
