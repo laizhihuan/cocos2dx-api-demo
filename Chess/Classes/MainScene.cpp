@@ -8,6 +8,7 @@
 
 #include "MainScene.h"
 #include "Common.h"
+#include "SceneGame.h"
 
 bool MainScene::init()
 {
@@ -86,6 +87,7 @@ void MainScene::update(float delta)
     //当俩个棋子碰撞时，启动游戏
     if (_black->getPositionX() - _red->getPositionX() <= _red->getContentSize().width) {
         log("start game");
+        Director::getInstance()->replaceScene(SceneGame::createScene(_selected));
     }
 }
 
