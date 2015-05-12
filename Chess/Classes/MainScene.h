@@ -26,7 +26,7 @@ public:
     Sprite* _red;    //红方
     Sprite* _black;  //黑方
     
-    bool _selected;  //选择了那一方
+    bool _selected;  //选择了那一方,ture红方，false黑方
     
     void update(float delta);  //帧循环
     
