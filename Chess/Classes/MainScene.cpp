@@ -18,12 +18,12 @@ bool MainScene::init()
     // 创建红棋
     Sprite* sprite1 = Sprite::create("bkg2.png");
 	addChild(sprite1);
-	sprite1->setPosition(ccp(winSize.width/2 - driff, winSize.height / 2));
+	sprite1->setPosition(Vec2(winSize.width/2 - driff, winSize.height / 2));
     
     // 创建黑棋
     Sprite* sprite2 = Sprite::create("bkg1.png");
     addChild(sprite2);
-    sprite2->setPosition(ccp(winSize.width/2 + driff, winSize.height/2));
+    sprite2->setPosition(Vec2(winSize.width/2 + driff, winSize.height/2));
     
     // 添加触摸，使用单点触控功能
     setTouchEnabled(true);
