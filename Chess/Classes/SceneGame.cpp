@@ -48,6 +48,9 @@ bool SceneGame::init(bool red)
     plate->setScale((winSize.height -_plateOffset.y *2) / plate->getContentSize().height);
     
     //摆棋子
+    Stone::_ptOff = Vec2(48, 24);
+	Stone::_d = winSize.height / 10;
+    
     for (int i=0; i<32; i++) {
         _stone[i] = Stone::create(i);
         addChild(_stone[i]);
