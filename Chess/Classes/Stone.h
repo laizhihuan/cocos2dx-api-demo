@@ -85,8 +85,13 @@ public:
      *  是否死亡
      */
     bool _dead;
-    
+    /**
+     *  棋子摆放的偏移量
+     */
     static Vec2 _ptOff;
+    /**
+     *  棋子的直径
+     */
     static float _d;
     
 };

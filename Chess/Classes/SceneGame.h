@@ -30,9 +30,46 @@ public:
     
     bool init(bool red);
     
+    /**
+     *  游戏中的棋子数组
+     */
     Stone* _stone[32];
     
     Point _plateOffset;
+    
+    bool onTouchBegan(Touch *touch, Event *unused_event);
+    void onTouchMoved(Touch *touch, Event *unused_event);
+    void onTouchEnded(Touch *touch, Event *unused_event);
+    void onTouchCancelled(Touch *touch, Event *unused_event);
+    
+    /**
+     *  选择棋子的id
+     */
+    int _selectId;
+    
+    /**
+     *  选中一个棋子
+     *
+     *  @param touch 触摸
+     */
+    void selectStone(Touch *touch);
+    /**
+     *  获取触摸点id
+     *
+     *  @param touch
+     */
+    int getClickStone(Touch *touch);
+    
+    /**
+     *  选中棋子后显示一个背景精灵
+     */
+    Sprite* _selectFlag;
+    
+    bool getRowColByPos(int &row, int &col, Vec2 ptPos);
+    
+    int getStoneIdByRowCol(int row,int col);
+    
+    Vec2 getPosByRowCol(int row, int col);
 };
 
 #endif /* defined(__Chess__SceneGame__) */

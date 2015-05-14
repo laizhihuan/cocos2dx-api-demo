@@ -10,7 +10,7 @@
 #include "SceneGame.h"
 
 Vec2 Stone::_ptOff;
-float Stone::_d; // 棋子的直径
+float Stone::_d; 
 
 Stone* Stone::create(int id)
 {
