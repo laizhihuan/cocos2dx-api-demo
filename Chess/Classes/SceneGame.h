@@ -65,7 +65,7 @@ public:
      */
     Sprite* _selectFlag;
     
-    bool getRowColByPos(int &row, int &col, Vec2 ptPos);
+    bool getRowColByPos(int &row, int& col, Vec2 ptPos);
     
     int getStoneIdByRowCol(int row,int col);
     

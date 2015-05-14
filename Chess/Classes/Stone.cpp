@@ -41,7 +41,7 @@ bool Stone::init(int id)
 	}
     
 	setPosition(getPos());
-	//setScale(.9f);
+	setScale(1.1f);
     
 	return true;
 };

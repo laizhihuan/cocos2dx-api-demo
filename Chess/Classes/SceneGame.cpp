@@ -48,7 +48,7 @@ bool SceneGame::init(bool red)
     plate->setScale((winSize.height -_plateOffset.y *2) / plate->getContentSize().height);
     
     //摆棋子
-    Stone::_ptOff = Vec2(48, 24);
+    Stone::_ptOff = Vec2(51, 27);
 	Stone::_d = winSize.height / 10;
     
     for (int i=0; i<32; i++) {
@@ -70,12 +70,15 @@ bool SceneGame::init(bool red)
     return true;
 }
 
-bool SceneGame::getRowColByPos(int &row, int &col, Vec2 ptPos)
+bool SceneGame::getRowColByPos(int &row, int& col, Vec2 ptPos)
 {
-    for (row = 0; row<10; row++) {
-        for (col = 0; col<9; col++) {
+    for (row = 0; row<10; row++)
+    {
+        for (col = 0; col<9; col++)
+        {
             Vec2 pt = getPosByRowCol(row,col);
-            if (pt.getDistance(ptPos) < Stone::_d/2) {
+            if (pt.getDistance(ptPos) < Stone::_d/2)
+            {
                 return true;
             }
         }
@@ -95,7 +98,8 @@ int SceneGame::getStoneIdByRowCol(int row,int col)
 {
     for (int i = 0; i < 32; i++)
 	{
-		if (_stone[i]->_row == row && _stone[i]->_col == col
+		if (_stone[i]->_row == row
+            && _stone[i]->_col == col
 			&& !_stone[i]->_dead)
 			return i;
 	}
@@ -125,17 +129,17 @@ void SceneGame::selectStone(Touch *touch)
     }
 }
 
-bool onTouchBegan(Touch *touch, Event *unused_event)
+bool SceneGame::onTouchBegan(Touch *touch, Event *unused_event)
 {
     return true ;
 }
-void onTouchMoved(Touch *touch, Event *unused_event)
+void SceneGame::onTouchMoved(Touch *touch, Event *unused_event)
 {
 }
-void onTouchEnded(Touch *touch, Event *unused_event)
+void SceneGame::onTouchEnded(Touch *touch, Event *unused_event)
 {
     
 }
-void onTouchCancelled(Touch *touch, Event *unused_event)
+void SceneGame::onTouchCancelled(Touch *touch, Event *unused_event)
 {
 }
