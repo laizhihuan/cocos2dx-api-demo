@@ -67,6 +67,7 @@ bool SceneGame::init(bool red)
     
     _selectId = -1;
     
+    _redTurn = true;
     return true;
 }
 
@@ -121,11 +122,15 @@ int SceneGame::getClickStone(Touch *touch)
 void SceneGame::selectStone(Touch *touch)
 {
     int clickId = getClickStone(touch);
-    if (clickId != -1) {
-        _selectFlag->setVisible(true);
-        _selectFlag->setPosition(_stone[clickId]->getPosition());
-        
-        _selectId = clickId;
+    if (clickId != -1)
+    {
+        if (_redTurn == _stone[clickId]->isRed)
+        {
+            _selectFlag->setVisible(true);
+            _selectFlag->setPosition(_stone[clickId]->getPosition());
+            
+            _selectId = clickId;
+        }
     }
 }
 
@@ -142,7 +147,6 @@ void SceneGame::moveStone(Touch *touch)
 	}
     
     int row,col;
-    
     //如果点击的目标位置，不在棋盘内，不能走
     if (!getRowColByPos(row, col, touch->getLocation())) {
         return;
@@ -152,6 +156,14 @@ void SceneGame::moveStone(Touch *touch)
     _stone[_selectId]->move(row, col);
 	_selectId = -1;
 	_selectFlag->setVisible(false);
+    
+    //如果走棋信息
+    if (tagetId != -1) {
+        _stone[tagetId]->_dead=true;
+        _stone[tagetId]->setVisible(false);
+    }
+    
+    _redTurn = !_redTurn;
 }
 
 bool SceneGame::onTouchBegan(Touch *touch, Event *unused_event)

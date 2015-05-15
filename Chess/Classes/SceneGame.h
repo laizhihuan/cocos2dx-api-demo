@@ -67,6 +67,11 @@ public:
     int getClickStone(Touch *touch);
     
     /**
+     *  轮到谁走了
+     */
+    bool _redTurn;
+    
+    /**
      *  选中棋子后显示一个背景精灵
      */
     Sprite* _selectFlag;

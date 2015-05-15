@@ -28,7 +28,7 @@ bool MainScene::init()
     
     // 添加触摸，使用单点触控功能
     setTouchEnabled(true);
-    setTouchMode(kCCTouchesOneByOne);
+    setTouchMode(Touch::DispatchMode::ONE_BY_ONE);
     
     _red   = sprite1;
     _black = sprite2;
