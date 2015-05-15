@@ -54,6 +54,12 @@ public:
      */
     void selectStone(Touch *touch);
     /**
+     *  移动一个棋子
+     *
+     *  @param touch <#touch description#>
+     */
+    void moveStone(Touch *touch);
+    /**
      *  获取触摸点id
      *
      *  @param touch
@@ -70,6 +76,11 @@ public:
     int getStoneIdByRowCol(int row,int col);
     
     Vec2 getPosByRowCol(int row, int col);
+    
+    bool isSameColor(int id1, int id2)
+	{
+		return _stone[id1]->isRed == _stone[id2]->isRed;
+	}
 };
 
 #endif /* defined(__Chess__SceneGame__) */

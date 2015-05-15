@@ -48,7 +48,7 @@ bool SceneGame::init(bool red)
     plate->setScale((winSize.height -_plateOffset.y *2) / plate->getContentSize().height);
     
     //摆棋子
-    Stone::_ptOff = Vec2(51, 27);
+    Stone::_ptOff = Vec2(60, 36);
 	Stone::_d = winSize.height / 10;
     
     for (int i=0; i<32; i++) {
@@ -129,6 +129,31 @@ void SceneGame::selectStone(Touch *touch)
     }
 }
 
+void SceneGame::moveStone(Touch *touch)
+{
+    int tagetId = getClickStone(touch);
+    
+    // 先要判断，目标是不是己方的棋子，如果是，那么换选择
+	if (tagetId != -1 && isSameColor(tagetId, _selectId))
+	{
+		_selectId = tagetId;
+		_selectFlag->setPosition(_stone[tagetId]->getPosition());
+		return;
+	}
+    
+    int row,col;
+    
+    //如果点击的目标位置，不在棋盘内，不能走
+    if (!getRowColByPos(row, col, touch->getLocation())) {
+        return;
+    }
+    
+    //将棋子移动到目标点
+    _stone[_selectId]->move(row, col);
+	_selectId = -1;
+	_selectFlag->setVisible(false);
+}
+
 bool SceneGame::onTouchBegan(Touch *touch, Event *unused_event)
 {
     return true ;
@@ -136,10 +161,20 @@ bool SceneGame::onTouchBegan(Touch *touch, Event *unused_event)
 void SceneGame::onTouchMoved(Touch *touch, Event *unused_event)
 {
 }
+
 void SceneGame::onTouchEnded(Touch *touch, Event *unused_event)
 {
-    
+    //首先选择一个棋子，然后是走棋
+    if (_selectId == -1)
+    {
+        selectStone(touch);
+    }
+    else
+    {
+        moveStone(touch);
+    }
 }
+
 void SceneGame::onTouchCancelled(Touch *touch, Event *unused_event)
 {
 }

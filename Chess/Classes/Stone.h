@@ -58,6 +58,14 @@ public:
         return  col[id];
     };
     
+    void move(int row, int col)
+	{
+		_row = row;
+		_col = col;
+		Vec2 pt = getPos();
+		this->setPosition(pt);
+	}
+    
 public:
     static Stone* create(int id);
     bool init(int id);
