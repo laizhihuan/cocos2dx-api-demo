@@ -252,8 +252,35 @@ bool SceneGame::canMoveJiang(int moveId, int row, int col, int killid)
 
 bool SceneGame::canMoveShi(int moveId, int row, int col, int killid)
 {
-    return true;
+    if (_stone[moveId]->isRed)
+    {
+        if (row > 2 || row < 0) {
+            return false;
+        }
+    }
+    else
+    {
+        if (row > 9 || row < 7) {
+            return false;
+        }
+    }
+    
+    if (col < 3 || col > 5) {
+        return false;
+    }
+    
+    int r = _stone[moveId]->_row;
+    int c = _stone[moveId]->_col;
+    
+    int d = abs(r - row) * 10 + abs(c - col);
+    
+    if (d == 11) {
+        return true;
+    }
+    
+    return false;
 }
+
 bool SceneGame::canMoveXiang(int moveId, int row, int col, int killid)
 {
     return true;
