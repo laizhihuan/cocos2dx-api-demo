@@ -173,7 +173,61 @@ void SceneGame::moveStone(Touch *touch)
 
 bool SceneGame::canMove(int moveId, int row, int col, int killid)
 {
-    
+    switch (_stone[moveId]->_type) {
+        case Stone::CHE:
+            return canMoveChe(moveId, row, col, killid);
+            break;
+        case Stone::MA:
+            return canMoveMa(moveId, row, col, killid);
+            break;
+        case Stone::PAO:
+            return canMovePao(moveId, row, col, killid);
+            break;
+        case Stone::BING:
+            return canMoveBing(moveId, row, col, killid);
+            break;
+        case Stone::JIANG:
+            return canMoveJiang(moveId, row, col, killid);
+            break;
+        case Stone::SHI:
+            return canMoveShi(moveId, row, col, killid);
+            break;
+        case Stone::XIANG:
+            return canMoveXiang(moveId, row, col, killid);
+            break;
+        default:
+            break;
+    }
+    return true;
+}
+
+
+bool SceneGame::canMoveChe(int moveId, int row, int col, int killid)
+{
+    return true;
+}
+bool SceneGame::canMoveMa(int moveId, int row, int col, int killid)
+{
+    return true;
+}
+bool SceneGame::canMovePao(int moveId, int row, int col, int killid)
+{
+    return true;
+}
+bool SceneGame::canMoveBing(int moveId, int row, int col, int killid)
+{
+    return true;
+}
+bool SceneGame::canMoveJiang(int moveId, int row, int col, int killid)
+{
+    return true;
+}
+bool SceneGame::canMoveShi(int moveId, int row, int col, int killid)
+{
+    return true;
+}
+bool SceneGame::canMoveXiang(int moveId, int row, int col, int killid)
+{
     return true;
 }
 

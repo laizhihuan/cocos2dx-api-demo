@@ -97,6 +97,14 @@ public:
      *  @return true表示可以移动，false表示不能移动
      */
     bool canMove(int moveId, int row, int col, int killid);
+    
+    bool canMoveChe(int moveId, int row, int col, int killid);
+    bool canMoveMa(int moveId, int row, int col, int killid);
+    bool canMovePao(int moveId, int row, int col, int killid);
+    bool canMoveBing(int moveId, int row, int col, int killid);
+    bool canMoveJiang(int moveId, int row, int col, int killid);
+    bool canMoveShi(int moveId, int row, int col, int killid);
+    bool canMoveXiang(int moveId, int row, int col, int killid);
 };
 
 #endif /* defined(__Chess__SceneGame__) */
