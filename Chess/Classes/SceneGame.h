@@ -86,6 +86,17 @@ public:
 	{
 		return _stone[id1]->isRed == _stone[id2]->isRed;
 	}
+    /**
+     *  判断选择的棋子是否可以移动
+     *
+     *  @param moveId 移动的棋子id
+     *  @param row    移动目标行
+     *  @param col    移动目标列
+     *  @param killid 移动目标可能出现的棋子
+     *
+     *  @return true表示可以移动，false表示不能移动
+     */
+    bool canMove(int moveId, int row, int col, int killid);
 };
 
 #endif /* defined(__Chess__SceneGame__) */

@@ -147,6 +147,11 @@ void SceneGame::moveStone(Touch *touch)
 	}
     
     int row,col;
+    // TODO:加入走棋规则的判断
+    if (!canMove(_selectId, row, col, tagetId)) {
+        return;
+    }
+    
     //如果点击的目标位置，不在棋盘内，不能走
     if (!getRowColByPos(row, col, touch->getLocation())) {
         return;
@@ -164,6 +169,12 @@ void SceneGame::moveStone(Touch *touch)
     }
     
     _redTurn = !_redTurn;
+}
+
+bool SceneGame::canMove(int moveId, int row, int col, int killid)
+{
+    
+    return true;
 }
 
 bool SceneGame::onTouchBegan(Touch *touch, Event *unused_event)
