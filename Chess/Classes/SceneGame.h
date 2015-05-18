@@ -104,6 +104,9 @@ public:
     bool canMoveBing(int moveId, int row, int col, int killid);
     bool canMoveJiang(int moveId, int row, int col, int killid);
     bool canMoveShi(int moveId, int row, int col, int killid);
+    /**
+     *  实现蒋的移动规则
+     */
     bool canMoveXiang(int moveId, int row, int col, int killid);
 };
 

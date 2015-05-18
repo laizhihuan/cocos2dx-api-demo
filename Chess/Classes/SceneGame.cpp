@@ -147,13 +147,13 @@ void SceneGame::moveStone(Touch *touch)
 	}
     
     int row,col;
-    // TODO:加入走棋规则的判断
-    if (!canMove(_selectId, row, col, tagetId)) {
+    //如果点击的目标位置，不在棋盘内，不能走
+    if (!getRowColByPos(row, col, touch->getLocation())) {
         return;
     }
     
-    //如果点击的目标位置，不在棋盘内，不能走
-    if (!getRowColByPos(row, col, touch->getLocation())) {
+    // TODO:加入走棋规则的判断
+    if (!canMove(_selectId, row, col, tagetId)) {
         return;
     }
     
@@ -218,10 +218,38 @@ bool SceneGame::canMoveBing(int moveId, int row, int col, int killid)
 {
     return true;
 }
+
 bool SceneGame::canMoveJiang(int moveId, int row, int col, int killid)
 {
-    return true;
+    if (_stone[moveId]->isRed)
+    {
+        if (row > 2 || row < 0) {
+            return false;
+        }
+    }
+    else
+    {
+        if (row > 9 || row < 7) {
+            return false;
+        }
+    }
+    
+    if (col < 3 || col > 5) {
+        return false;
+    }
+    
+    int r = _stone[moveId]->_row;
+    int c = _stone[moveId]->_col;
+    
+    int d = abs(r - row) * 10 + abs(c - col);
+    
+    if (d == 10 || d == 1) {
+        return true;
+    }
+    
+    return false;
 }
+
 bool SceneGame::canMoveShi(int moveId, int row, int col, int killid)
 {
     return true;
