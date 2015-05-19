@@ -283,6 +283,33 @@ bool SceneGame::canMoveShi(int moveId, int row, int col, int killid)
 
 bool SceneGame::canMoveXiang(int moveId, int row, int col, int killid)
 {
+    //相不能过河
+    if (_stone[moveId]->isRed) {
+        if (row > 4) {
+            return false;
+        }
+    } else {
+        if (row < 5) {
+            return false;
+        }
+    }
+    
+    //相行田
+    int r = _stone[moveId]->_row;
+    int c = _stone[moveId]->_col;
+    
+    int d = abs(r - row) * 10 + abs(c - col);
+    if (d != 22) {
+        return false;
+    }
+    
+    //伴相眼
+    int mr = (r+row)/2;
+    int mc = (c+col)/2;
+    int id = getStoneIdByRowCol(mr, mc);
+    if (id != -1) {
+        return false;
+    }
     return true;
 }
 
@@ -290,6 +317,7 @@ bool SceneGame::onTouchBegan(Touch *touch, Event *unused_event)
 {
     return true ;
 }
+
 void SceneGame::onTouchMoved(Touch *touch, Event *unused_event)
 {
 }
