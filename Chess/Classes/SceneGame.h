@@ -98,16 +98,39 @@ public:
      */
     bool canMove(int moveId, int row, int col, int killid);
     
+    //是否可以移动车
     bool canMoveChe(int moveId, int row, int col, int killid);
+    
+    //是否可以移动马
     bool canMoveMa(int moveId, int row, int col, int killid);
+    
+    //是否可以移动炮
     bool canMovePao(int moveId, int row, int col, int killid);
+    
+    //是否可以移动兵
     bool canMoveBing(int moveId, int row, int col, int killid);
+    
+    //是否可以移动蒋
     bool canMoveJiang(int moveId, int row, int col, int killid);
+    
+    //是否可以移动士
     bool canMoveShi(int moveId, int row, int col, int killid);
     /**
      *  实现蒋的移动规则
      */
     bool canMoveXiang(int moveId, int row, int col, int killid);
+    
+    /**
+     *  获取起点和终点一行里所有棋子的数量，如果两点不在棋盘中的一行，则return －1，否则返回棋子数量
+     *
+     *  @param firstRow 起点
+     *  @param firstCol 起点
+     *  @param endRow   终点
+     *  @param endCol   终点
+     *
+     *  @return －1，or 0,1,2
+     */
+    int getStoneCountInLine(int firstRow, int firstCol, int endRow, int endCol);
 };
 
 #endif /* defined(__Chess__SceneGame__) */

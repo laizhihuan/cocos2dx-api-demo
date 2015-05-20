@@ -201,19 +201,58 @@ bool SceneGame::canMove(int moveId, int row, int col, int killid)
     return true;
 }
 
+int SceneGame::getStoneCountInLine(int firstRow, int firstCol, int endRow, int endCol)
+{
+    //如果两点不在同一条直线上，返回－1
+    if (firstRow != endRow && firstCol != endCol) return -1;
+    
+    int count = 0;
+    
+    if (firstRow == endRow) {
+        int min = firstCol < endCol ? firstCol : endCol;
+        int max = firstCol + endCol - min;
+        for (int col = min + 1; col < max; col++) {
+            int id = getStoneIdByRowCol(firstRow, col);
+            if (id != -1) {
+                count ++;
+            }
+        }
+    } else if(firstCol == endCol) {
+        int min = firstRow < endRow ? firstRow : endRow;
+        int max = firstRow + endRow - min;
+        for (int row = min + 1; row < max; row ++) {
+            int id = getStoneIdByRowCol(firstCol, row);
+            if (id != -1) {
+                count ++;
+            }
+        }
+    }
+    
+    return count;
+}
 
 bool SceneGame::canMoveChe(int moveId, int row, int col, int killid)
 {
-    return true;
+    if (getStoneCountInLine(row, col, _stone[moveId]->_row, _stone[moveId]->_col)) {
+        return true;
+    }
+    return false;
 }
+
 bool SceneGame::canMoveMa(int moveId, int row, int col, int killid)
 {
     return true;
 }
+
 bool SceneGame::canMovePao(int moveId, int row, int col, int killid)
 {
-    return true;
+    if (killid == -1) {
+        return canMoveChe(moveId, row, col, killid);
+    }
+    
+    return getStoneCountInLine(row, col, _stone[moveId]->_row, _stone[moveId]->_col);
 }
+
 bool SceneGame::canMoveBing(int moveId, int row, int col, int killid)
 {
     return true;
