@@ -221,7 +221,7 @@ int SceneGame::getStoneCountInLine(int firstRow, int firstCol, int endRow, int e
         int min = firstRow < endRow ? firstRow : endRow;
         int max = firstRow + endRow - min;
         for (int row = min + 1; row < max; row ++) {
-            int id = getStoneIdByRowCol(firstCol, row);
+            int id = getStoneIdByRowCol(row, firstCol);
             if (id != -1) {
                 count ++;
             }
@@ -233,7 +233,7 @@ int SceneGame::getStoneCountInLine(int firstRow, int firstCol, int endRow, int e
 
 bool SceneGame::canMoveChe(int moveId, int row, int col, int killid)
 {
-    if (getStoneCountInLine(row, col, _stone[moveId]->_row, _stone[moveId]->_col)) {
+    if (getStoneCountInLine(row, col, _stone[moveId]->_row, _stone[moveId]->_col) == 0) {
         return true;
     }
     return false;
@@ -241,6 +241,30 @@ bool SceneGame::canMoveChe(int moveId, int row, int col, int killid)
 
 bool SceneGame::canMoveMa(int moveId, int row, int col, int killid)
 {
+    int r = _stone[moveId]->_row;
+    int c = _stone[moveId]->_col;
+    
+    int d = abs(r-row)*10 + abs(c-col);
+    
+    //if (!(d == 21 || d == 12) ) {
+    if (d != 21 && d != 12) {
+        return false;
+    }
+    
+    if (d == 21) {
+        int mr = (r+row)/2;
+        int mc = c;
+        if (getStoneIdByRowCol(mr, mc) != -1) {
+            return false;
+        }
+    } else {
+        int mr = r;
+        int mc = (r+col)/2;
+        if (getStoneIdByRowCol(mr, mc) != -1) {
+            return false;
+        }
+    }
+    
     return true;
 }
 
@@ -250,7 +274,7 @@ bool SceneGame::canMovePao(int moveId, int row, int col, int killid)
         return canMoveChe(moveId, row, col, killid);
     }
     
-    return getStoneCountInLine(row, col, _stone[moveId]->_row, _stone[moveId]->_col);
+    return getStoneCountInLine(row, col, _stone[moveId]->_row, _stone[moveId]->_col) == 1;
 }
 
 bool SceneGame::canMoveBing(int moveId, int row, int col, int killid)
