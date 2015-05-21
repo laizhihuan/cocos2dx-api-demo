@@ -12,6 +12,7 @@
 #include "Common.h"
 #include "cocos2d.h"
 #include "Stone.h"
+#include "MainScene.h"
 USING_NS_CC;
 
 class SceneGame : public Layer

@@ -279,12 +279,48 @@ bool SceneGame::canMovePao(int moveId, int row, int col, int killid)
 
 bool SceneGame::canMoveBing(int moveId, int row, int col, int killid)
 {
+    //兵只能走一步
+    int r = _stone[moveId]->_row;
+    int c = _stone[moveId]->_col;
+    
+    int d = abs(r - row) * 10 + abs(c - col);
+    
+    if (d != 10 && d != 1) {
+        return false;
+    }
+    
+    //区别是红方还是黑方
+    if (_stone[moveId]->isRed == MainScene::_selected) {
+        //不能后退
+        if (row < r) {
+            return false;
+        }
+        //没有过河，不能平移
+        if (r <= 4 && row == r) {
+            return false;
+        }
+    }
+    else {
+        if (row > r) {
+            return false;
+        }
+        
+        if (r >= 4 && row == r) {
+            return false;
+        }
+    }
+    
     return true;
 }
 
 bool SceneGame::canMoveJiang(int moveId, int row, int col, int killid)
 {
-    if (_stone[moveId]->isRed)
+    // 老蒋照面
+	if (killid != -1 && _stone[killid]->_type == Stone::JIANG)
+		return canMoveChe(moveId, row, col, killid);
+    
+    // 不照面的规则
+    if (_stone[moveId]->isRed == MainScene::_selected)
     {
         if (row > 2 || row < 0) {
             return false;

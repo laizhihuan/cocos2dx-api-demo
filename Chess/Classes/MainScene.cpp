@@ -10,6 +10,8 @@
 #include "Common.h"
 #include "SceneGame.h"
 
+bool MainScene::_selected;
+
 bool MainScene::init()
 {
     Layer::init();
