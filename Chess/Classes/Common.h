@@ -30,4 +30,17 @@ static inline Scene* CreateScene(Layer* layer)
     return scene;
 }
 
+/**
+ *  移动一个节点到指定位置
+ *
+ *  @param ptOff 指定位置
+ *  @param node  需要移动的节点
+ *
+ *  @return <#return value description#>
+ */
+static inline void moveNode(Vec2 ptOff, Node* node)
+{
+    node->setPosition(node->getPosition()+ptOff);
+}
+
 #endif /* defined(__Chess__Common__) */

@@ -68,7 +68,21 @@ bool SceneGame::init(bool red)
     _selectId = -1;
     
     _redTurn = true;
+    
+    initRegretButton();
     return true;
+}
+
+void SceneGame::initRegretButton()
+{
+	Menu* menu = Menu::create();
+	addChild(menu);
+    
+	MenuItem* item = MenuItemImage::create("regret.jpg", "regret.jpg");
+	menu->addChild(item);
+    
+	item->setTarget(this, menu_selector(SceneGame::regret));
+	moveNode(Vec2(200, 100), item);
 }
 
 bool SceneGame::getRowColByPos(int &row, int& col, Vec2 ptPos)
@@ -157,6 +171,10 @@ void SceneGame::moveStone(Touch *touch)
         return;
     }
     
+    // 纪录走棋信息
+    Step* step = Step::create(_selectId, _stone[_selectId]->_row, _stone[_selectId]->_col, row, col, tagetId);
+    _steps->addObject(step);
+    
     //将棋子移动到目标点
     _stone[_selectId]->move(row, col);
 	_selectId = -1;
@@ -169,6 +187,33 @@ void SceneGame::moveStone(Touch *touch)
     }
     
     _redTurn = !_redTurn;
+}
+
+void SceneGame::regret(CCObject*)
+{
+    if (_steps->count() == 0) {
+        return;
+    }
+    
+    //将棋子恢复到原来位置
+    Object* obj = _steps->lastObject();
+    Step* step = (Step*)obj;
+    Stone* sMove = _stone[step->_moveid];
+    sMove->move(step->_rowFrom, step->_colFrom);
+    
+    if (step->_killid != -1) {
+        Stone* killStone = _stone[step->_killid];
+        killStone->_dead = false;
+        killStone->setVisible(true);
+    }
+    
+    // 初始化一些和移动相关的中间变量
+	_selectId = -1;
+	_selectFlag->setVisible(false);
+	_redTurn = !_redTurn;
+    
+	// 把array里的最后一个对象删除
+	_steps->removeLastObject();
 }
 
 bool SceneGame::canMove(int moveId, int row, int col, int killid)
@@ -317,7 +362,9 @@ bool SceneGame::canMoveJiang(int moveId, int row, int col, int killid)
 {
     // 老蒋照面
 	if (killid != -1 && _stone[killid]->_type == Stone::JIANG)
-		return canMoveChe(moveId, row, col, killid);
+    {
+        return canMoveChe(moveId, row, col, killid);
+    }
     
     // 不照面的规则
     if (_stone[moveId]->isRed == MainScene::_selected)

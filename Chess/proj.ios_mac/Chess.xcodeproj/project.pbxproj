@@ -120,6 +120,8 @@
 		43B748771B01DCFC00136931 /* SceneGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43B748741B01DCFC00136931 /* SceneGame.cpp */; };
 		43B7487A1B02DCF200136931 /* Stone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43B748781B02DCF200136931 /* Stone.cpp */; };
 		43B7487B1B02DCF200136931 /* Stone.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43B748781B02DCF200136931 /* Stone.cpp */; };
+		43B7487E1B0DBB2000136931 /* Step.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43B7487C1B0DBB2000136931 /* Step.cpp */; };
+		43B7487F1B0DBB2000136931 /* Step.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43B7487C1B0DBB2000136931 /* Step.cpp */; };
 		503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 503AE0F617EB97AB00D1A890 /* Icon.icns */; };
 		503AE10017EB989F00D1A890 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FB17EB989F00D1A890 /* AppController.mm */; };
 		503AE10117EB989F00D1A890 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FC17EB989F00D1A890 /* main.m */; };
@@ -372,6 +374,8 @@
 		43B748751B01DCFC00136931 /* SceneGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SceneGame.h; path = ../Classes/SceneGame.h; sourceTree = "<group>"; };
 		43B748781B02DCF200136931 /* Stone.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Stone.cpp; path = ../Classes/Stone.cpp; sourceTree = "<group>"; };
 		43B748791B02DCF200136931 /* Stone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Stone.h; path = ../Classes/Stone.h; sourceTree = "<group>"; };
+		43B7487C1B0DBB2000136931 /* Step.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Step.cpp; path = ../Classes/Step.cpp; sourceTree = "<group>"; };
+		43B7487D1B0DBB2000136931 /* Step.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Step.h; path = ../Classes/Step.h; sourceTree = "<group>"; };
 		503AE0F617EB97AB00D1A890 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
 		503AE0F717EB97AB00D1A890 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		503AE0FA17EB989F00D1A890 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = ios/AppController.h; sourceTree = SOURCE_ROOT; };
@@ -490,6 +494,8 @@
 				43B748751B01DCFC00136931 /* SceneGame.h */,
 				43B748781B02DCF200136931 /* Stone.cpp */,
 				43B748791B02DCF200136931 /* Stone.h */,
+				43B7487C1B0DBB2000136931 /* Step.cpp */,
+				43B7487D1B0DBB2000136931 /* Step.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -957,6 +963,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43B7487E1B0DBB2000136931 /* Step.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
@@ -978,6 +985,7 @@
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 				43B748771B01DCFC00136931 /* SceneGame.cpp in Sources */,
 				43B7487B1B02DCF200136931 /* Stone.cpp in Sources */,
+				43B7487F1B0DBB2000136931 /* Step.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

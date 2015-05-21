@@ -13,6 +13,7 @@
 #include "cocos2d.h"
 #include "Stone.h"
 #include "MainScene.h"
+#include "Step.h"
 USING_NS_CC;
 
 class SceneGame : public Layer
@@ -132,6 +133,29 @@ public:
      *  @return －1，or 0,1,2
      */
     int getStoneCountInLine(int firstRow, int firstCol, int endRow, int endCol);
+    /**
+     *  纪录走棋信息
+     */
+    Array* _steps;
+    
+    void onEnter()
+    {
+        Layer::onEnter();
+        _steps = Array::create();
+        _steps->retain();
+    }
+    
+    void onExit()
+    {
+        Layer::onExit();
+        _steps->release();
+    }
+    /**
+     *  悔棋操作
+     */
+    void regret(CCObject*);
+    
+    void initRegretButton();
 };
 
 #endif /* defined(__Chess__SceneGame__) */
