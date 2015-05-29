@@ -9,6 +9,23 @@
 #ifndef __Chess__AI__
 #define __Chess__AI__
 
-#include <iostream>
+#include "SceneGame.h"
+#include "Step.h"
+
+class AI
+{
+public:
+    
+    Step* genStep(Game* game);
+    
+    ccArray* allPosisibleMove(SceneGame* game);
+    
+    void fakeMove(SceneGame* game, Step* step);
+    
+    void unfakeMove(SceneGame* game, Step* step);
+    
+    int calcScore(SceneGame* game);
+    
+};
 
 #endif /* defined(__Chess__AI__) */
