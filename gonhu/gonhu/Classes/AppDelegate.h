@@ -2,6 +2,8 @@
 #define  _APP_DELEGATE_H_
 
 #include "cocos2d.h"
+#include "extensions/cocos-ext.h"
+#include "cocostudio/CocoStudio.h"
 
 /**
 @brief    The cocos2d Application.
