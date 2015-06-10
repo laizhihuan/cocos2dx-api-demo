@@ -30,7 +30,7 @@ public:
      *
      *  @return <#return value description#>
      */
-    ccArray* allPosisibleMove(SceneGame* game);
+    CCArray* allPosisibleMove(SceneGame* game);
     /**
      *  模拟移动棋子
      *
