@@ -26,6 +26,12 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		43B748871B2913A000136931 /* ActionTools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43B748851B2913A000136931 /* ActionTools.cpp */; };
+		43B7488C1B2D0BCC00136931 /* Hero.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43B7488A1B2D0BCC00136931 /* Hero.cpp */; };
+		43B7488D1B2D0BCC00136931 /* Hero.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43B7488A1B2D0BCC00136931 /* Hero.cpp */; };
+		43B748901B2D0BE900136931 /* Monster.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43B7488E1B2D0BE900136931 /* Monster.cpp */; };
+		43B748911B2D0BE900136931 /* Monster.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43B7488E1B2D0BE900136931 /* Monster.cpp */; };
+		43B748941B2D0DDF00136931 /* GameMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43B748921B2D0DDF00136931 /* GameMap.cpp */; };
+		43B748951B2D0DDF00136931 /* GameMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43B748921B2D0DDF00136931 /* GameMap.cpp */; };
 		503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 503AE0F617EB97AB00D1A890 /* Icon.icns */; };
 		503AE10017EB989F00D1A890 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FB17EB989F00D1A890 /* AppController.mm */; };
 		503AE10117EB989F00D1A890 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FC17EB989F00D1A890 /* main.m */; };
@@ -231,6 +237,12 @@
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		43B748851B2913A000136931 /* ActionTools.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ActionTools.cpp; path = ../Classes/ActionTools.cpp; sourceTree = "<group>"; };
 		43B748861B2913A000136931 /* ActionTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActionTools.h; path = ../Classes/ActionTools.h; sourceTree = "<group>"; };
+		43B7488A1B2D0BCC00136931 /* Hero.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Hero.cpp; path = ../Classes/Hero.cpp; sourceTree = "<group>"; };
+		43B7488B1B2D0BCC00136931 /* Hero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Hero.h; path = ../Classes/Hero.h; sourceTree = "<group>"; };
+		43B7488E1B2D0BE900136931 /* Monster.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Monster.cpp; path = ../Classes/Monster.cpp; sourceTree = "<group>"; };
+		43B7488F1B2D0BE900136931 /* Monster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Monster.h; path = ../Classes/Monster.h; sourceTree = "<group>"; };
+		43B748921B2D0DDF00136931 /* GameMap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameMap.cpp; path = ../Classes/GameMap.cpp; sourceTree = "<group>"; };
+		43B748931B2D0DDF00136931 /* GameMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameMap.h; path = ../Classes/GameMap.h; sourceTree = "<group>"; };
 		503AE0F617EB97AB00D1A890 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
 		503AE0F717EB97AB00D1A890 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		503AE0FA17EB989F00D1A890 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = ios/AppController.h; sourceTree = SOURCE_ROOT; };
@@ -345,6 +357,12 @@
 				1AFAF8B616D35DE700DB1158 /* HelloWorldScene.h */,
 				43B748851B2913A000136931 /* ActionTools.cpp */,
 				43B748861B2913A000136931 /* ActionTools.h */,
+				43B7488A1B2D0BCC00136931 /* Hero.cpp */,
+				43B7488B1B2D0BCC00136931 /* Hero.h */,
+				43B7488E1B2D0BE900136931 /* Monster.cpp */,
+				43B7488F1B2D0BE900136931 /* Monster.h */,
+				43B748921B2D0DDF00136931 /* GameMap.cpp */,
+				43B748931B2D0DDF00136931 /* GameMap.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -673,8 +691,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
+				43B748941B2D0DDF00136931 /* GameMap.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
+				43B7488C1B2D0BCC00136931 /* Hero.cpp in Sources */,
+				43B748901B2D0BE900136931 /* Monster.cpp in Sources */,
 				43B748871B2913A000136931 /* ActionTools.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */,
@@ -687,7 +708,10 @@
 			files = (
 				5087E75717EB910900C73F5D /* AppDelegate.cpp in Sources */,
 				5087E75817EB910900C73F5D /* HelloWorldScene.cpp in Sources */,
+				43B748911B2D0BE900136931 /* Monster.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
+				43B748951B2D0DDF00136931 /* GameMap.cpp in Sources */,
+				43B7488D1B2D0BCC00136931 /* Hero.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
