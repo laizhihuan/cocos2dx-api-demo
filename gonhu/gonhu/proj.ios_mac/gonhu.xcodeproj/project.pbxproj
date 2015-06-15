@@ -34,6 +34,10 @@
 		43B748951B2D0DDF00136931 /* GameMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43B748921B2D0DDF00136931 /* GameMap.cpp */; };
 		43B748991B2E591F00136931 /* GlobaDefine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43B748971B2E591F00136931 /* GlobaDefine.cpp */; };
 		43B7489A1B2E591F00136931 /* GlobaDefine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43B748971B2E591F00136931 /* GlobaDefine.cpp */; };
+		43B7489F1B2EF0D100136931 /* StartLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43B7489D1B2EF0D100136931 /* StartLayer.cpp */; };
+		43B748A01B2EF0D100136931 /* StartLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43B7489D1B2EF0D100136931 /* StartLayer.cpp */; };
+		43B748A31B2EF4F500136931 /* SplashLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43B748A11B2EF4F500136931 /* SplashLayer.cpp */; };
+		43B748A41B2EF4F500136931 /* SplashLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43B748A11B2EF4F500136931 /* SplashLayer.cpp */; };
 		503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 503AE0F617EB97AB00D1A890 /* Icon.icns */; };
 		503AE10017EB989F00D1A890 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FB17EB989F00D1A890 /* AppController.mm */; };
 		503AE10117EB989F00D1A890 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FC17EB989F00D1A890 /* main.m */; };
@@ -247,6 +251,10 @@
 		43B748931B2D0DDF00136931 /* GameMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameMap.h; path = ../Classes/GameMap.h; sourceTree = "<group>"; };
 		43B748971B2E591F00136931 /* GlobaDefine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GlobaDefine.cpp; path = ../Classes/GlobaDefine.cpp; sourceTree = "<group>"; };
 		43B748981B2E591F00136931 /* GlobaDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GlobaDefine.h; path = ../Classes/GlobaDefine.h; sourceTree = "<group>"; };
+		43B7489D1B2EF0D100136931 /* StartLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StartLayer.cpp; path = ../Classes/StartLayer.cpp; sourceTree = "<group>"; };
+		43B7489E1B2EF0D100136931 /* StartLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StartLayer.h; path = ../Classes/StartLayer.h; sourceTree = "<group>"; };
+		43B748A11B2EF4F500136931 /* SplashLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SplashLayer.cpp; path = ../Classes/SplashLayer.cpp; sourceTree = "<group>"; };
+		43B748A21B2EF4F500136931 /* SplashLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SplashLayer.h; path = ../Classes/SplashLayer.h; sourceTree = "<group>"; };
 		503AE0F617EB97AB00D1A890 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
 		503AE0F717EB97AB00D1A890 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		503AE0FA17EB989F00D1A890 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = ios/AppController.h; sourceTree = SOURCE_ROOT; };
@@ -369,6 +377,10 @@
 				43B748931B2D0DDF00136931 /* GameMap.h */,
 				43B748971B2E591F00136931 /* GlobaDefine.cpp */,
 				43B748981B2E591F00136931 /* GlobaDefine.h */,
+				43B7489D1B2EF0D100136931 /* StartLayer.cpp */,
+				43B7489E1B2EF0D100136931 /* StartLayer.h */,
+				43B748A11B2EF4F500136931 /* SplashLayer.cpp */,
+				43B748A21B2EF4F500136931 /* SplashLayer.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -696,8 +708,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43B748A31B2EF4F500136931 /* SplashLayer.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				43B748941B2D0DDF00136931 /* GameMap.cpp in Sources */,
+				43B7489F1B2EF0D100136931 /* StartLayer.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				43B7488C1B2D0BCC00136931 /* Hero.cpp in Sources */,
@@ -715,9 +729,11 @@
 			files = (
 				5087E75717EB910900C73F5D /* AppDelegate.cpp in Sources */,
 				5087E75817EB910900C73F5D /* HelloWorldScene.cpp in Sources */,
+				43B748A01B2EF0D100136931 /* StartLayer.cpp in Sources */,
 				43B748911B2D0BE900136931 /* Monster.cpp in Sources */,
 				43B7489A1B2E591F00136931 /* GlobaDefine.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
+				43B748A41B2EF4F500136931 /* SplashLayer.cpp in Sources */,
 				43B748951B2D0DDF00136931 /* GameMap.cpp in Sources */,
 				43B7488D1B2D0BCC00136931 /* Hero.cpp in Sources */,
 			);
