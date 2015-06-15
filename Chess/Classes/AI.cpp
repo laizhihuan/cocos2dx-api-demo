@@ -29,7 +29,6 @@ CCArray* AI::allPosisibleMove(SceneGame* game)
                     arr->addObject(step);
                 }
             }
-
         }
     }
     
@@ -39,6 +38,7 @@ CCArray* AI::allPosisibleMove(SceneGame* game)
 
 int AI::calcScore(SceneGame* game)
 {
+    
     return 0;
 }
 
