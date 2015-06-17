@@ -14,6 +14,34 @@
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		3EACC98F19EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		3EACC99019EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
+		43B749131B30524500136931 /* back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 43B749031B30524500136931 /* back.jpg */; };
+		43B749141B30524500136931 /* back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 43B749031B30524500136931 /* back.jpg */; };
+		43B749151B30524500136931 /* Button_Disable.png in Resources */ = {isa = PBXBuildFile; fileRef = 43B749051B30524500136931 /* Button_Disable.png */; };
+		43B749161B30524500136931 /* Button_Disable.png in Resources */ = {isa = PBXBuildFile; fileRef = 43B749051B30524500136931 /* Button_Disable.png */; };
+		43B749171B30524500136931 /* Button_Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 43B749061B30524500136931 /* Button_Normal.png */; };
+		43B749181B30524500136931 /* Button_Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 43B749061B30524500136931 /* Button_Normal.png */; };
+		43B749191B30524500136931 /* Button_Press.png in Resources */ = {isa = PBXBuildFile; fileRef = 43B749071B30524500136931 /* Button_Press.png */; };
+		43B7491A1B30524500136931 /* Button_Press.png in Resources */ = {isa = PBXBuildFile; fileRef = 43B749071B30524500136931 /* Button_Press.png */; };
+		43B7491B1B30524500136931 /* CheckBox_Disable.png in Resources */ = {isa = PBXBuildFile; fileRef = 43B749081B30524500136931 /* CheckBox_Disable.png */; };
+		43B7491C1B30524500136931 /* CheckBox_Disable.png in Resources */ = {isa = PBXBuildFile; fileRef = 43B749081B30524500136931 /* CheckBox_Disable.png */; };
+		43B7491D1B30524500136931 /* CheckBox_Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 43B749091B30524500136931 /* CheckBox_Normal.png */; };
+		43B7491E1B30524500136931 /* CheckBox_Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 43B749091B30524500136931 /* CheckBox_Normal.png */; };
+		43B7491F1B30524500136931 /* CheckBox_Press.png in Resources */ = {isa = PBXBuildFile; fileRef = 43B7490A1B30524500136931 /* CheckBox_Press.png */; };
+		43B749201B30524500136931 /* CheckBox_Press.png in Resources */ = {isa = PBXBuildFile; fileRef = 43B7490A1B30524500136931 /* CheckBox_Press.png */; };
+		43B749211B30524500136931 /* CheckBoxNode_Disable.png in Resources */ = {isa = PBXBuildFile; fileRef = 43B7490B1B30524500136931 /* CheckBoxNode_Disable.png */; };
+		43B749221B30524500136931 /* CheckBoxNode_Disable.png in Resources */ = {isa = PBXBuildFile; fileRef = 43B7490B1B30524500136931 /* CheckBoxNode_Disable.png */; };
+		43B749231B30524500136931 /* CheckBoxNode_Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 43B7490C1B30524500136931 /* CheckBoxNode_Normal.png */; };
+		43B749241B30524500136931 /* CheckBoxNode_Normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 43B7490C1B30524500136931 /* CheckBoxNode_Normal.png */; };
+		43B749251B30524500136931 /* arial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43B7490E1B30524500136931 /* arial.ttf */; };
+		43B749261B30524500136931 /* arial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43B7490E1B30524500136931 /* arial.ttf */; };
+		43B749271B30524500136931 /* Marker Felt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43B7490F1B30524500136931 /* Marker Felt.ttf */; };
+		43B749281B30524500136931 /* Marker Felt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43B7490F1B30524500136931 /* Marker Felt.ttf */; };
+		43B749291B30524500136931 /* main.csb in Resources */ = {isa = PBXBuildFile; fileRef = 43B749101B30524500136931 /* main.csb */; };
+		43B7492A1B30524500136931 /* main.csb in Resources */ = {isa = PBXBuildFile; fileRef = 43B749101B30524500136931 /* main.csb */; };
+		43B7492B1B30524500136931 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 43B749121B30524500136931 /* .gitkeep */; };
+		43B7492C1B30524500136931 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 43B749121B30524500136931 /* .gitkeep */; };
+		43B7492F1B30526900136931 /* MainScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43B7492D1B30526900136931 /* MainScene.cpp */; };
+		43B749301B30526900136931 /* MainScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43B7492D1B30526900136931 /* MainScene.cpp */; };
 		46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7619C43A67006E1F66 /* CloseNormal.png */; };
 		46880B7C19C43A67006E1F66 /* CloseNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7619C43A67006E1F66 /* CloseNormal.png */; };
 		46880B7D19C43A67006E1F66 /* CloseSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7719C43A67006E1F66 /* CloseSelected.png */; };
@@ -22,8 +50,6 @@
 		46880B8219C43A67006E1F66 /* HelloWorld.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7A19C43A67006E1F66 /* HelloWorld.png */; };
 		46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46880B8419C43A87006E1F66 /* AppDelegate.cpp */; };
 		46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46880B8419C43A87006E1F66 /* AppDelegate.cpp */; };
-		46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */; };
-		46880B8B19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */; };
 		503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 503AE0F617EB97AB00D1A890 /* Icon.icns */; };
 		503AE10017EB989F00D1A890 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FB17EB989F00D1A890 /* AppController.mm */; };
 		503AE10117EB989F00D1A890 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FC17EB989F00D1A890 /* main.m */; };
@@ -108,13 +134,26 @@
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3EACC98E19EE6D4300EB3C5E /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
+		43B749031B30524500136931 /* back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = back.jpg; sourceTree = "<group>"; };
+		43B749051B30524500136931 /* Button_Disable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button_Disable.png; sourceTree = "<group>"; };
+		43B749061B30524500136931 /* Button_Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button_Normal.png; sourceTree = "<group>"; };
+		43B749071B30524500136931 /* Button_Press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button_Press.png; sourceTree = "<group>"; };
+		43B749081B30524500136931 /* CheckBox_Disable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CheckBox_Disable.png; sourceTree = "<group>"; };
+		43B749091B30524500136931 /* CheckBox_Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CheckBox_Normal.png; sourceTree = "<group>"; };
+		43B7490A1B30524500136931 /* CheckBox_Press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CheckBox_Press.png; sourceTree = "<group>"; };
+		43B7490B1B30524500136931 /* CheckBoxNode_Disable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CheckBoxNode_Disable.png; sourceTree = "<group>"; };
+		43B7490C1B30524500136931 /* CheckBoxNode_Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CheckBoxNode_Normal.png; sourceTree = "<group>"; };
+		43B7490E1B30524500136931 /* arial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = arial.ttf; sourceTree = "<group>"; };
+		43B7490F1B30524500136931 /* Marker Felt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Marker Felt.ttf"; sourceTree = "<group>"; };
+		43B749101B30524500136931 /* main.csb */ = {isa = PBXFileReference; lastKnownFileType = file; path = main.csb; sourceTree = "<group>"; };
+		43B749121B30524500136931 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		43B7492D1B30526900136931 /* MainScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainScene.cpp; sourceTree = "<group>"; };
+		43B7492E1B30526900136931 /* MainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainScene.h; sourceTree = "<group>"; };
 		46880B7619C43A67006E1F66 /* CloseNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseNormal.png; sourceTree = "<group>"; };
 		46880B7719C43A67006E1F66 /* CloseSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseSelected.png; sourceTree = "<group>"; };
 		46880B7A19C43A67006E1F66 /* HelloWorld.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HelloWorld.png; sourceTree = "<group>"; };
 		46880B8419C43A87006E1F66 /* AppDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppDelegate.cpp; sourceTree = "<group>"; };
 		46880B8519C43A87006E1F66 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelloWorldScene.cpp; sourceTree = "<group>"; };
-		46880B8719C43A87006E1F66 /* HelloWorldScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloWorldScene.h; sourceTree = "<group>"; };
 		503AE0F617EB97AB00D1A890 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
 		503AE0F717EB97AB00D1A890 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		503AE0FA17EB989F00D1A890 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = ios/AppController.h; sourceTree = SOURCE_ROOT; };
@@ -273,9 +312,46 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		43B749041B30524500136931 /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				43B749051B30524500136931 /* Button_Disable.png */,
+				43B749061B30524500136931 /* Button_Normal.png */,
+				43B749071B30524500136931 /* Button_Press.png */,
+				43B749081B30524500136931 /* CheckBox_Disable.png */,
+				43B749091B30524500136931 /* CheckBox_Normal.png */,
+				43B7490A1B30524500136931 /* CheckBox_Press.png */,
+				43B7490B1B30524500136931 /* CheckBoxNode_Disable.png */,
+				43B7490C1B30524500136931 /* CheckBoxNode_Normal.png */,
+			);
+			path = Default;
+			sourceTree = "<group>";
+		};
+		43B7490D1B30524500136931 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				43B7490E1B30524500136931 /* arial.ttf */,
+				43B7490F1B30524500136931 /* Marker Felt.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		43B749111B30524500136931 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				43B749121B30524500136931 /* .gitkeep */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				43B749031B30524500136931 /* back.jpg */,
+				43B749041B30524500136931 /* Default */,
+				43B7490D1B30524500136931 /* fonts */,
+				43B749101B30524500136931 /* main.csb */,
+				43B749111B30524500136931 /* res */,
 				521A8EA819F11F5000D177D7 /* fonts */,
 				3EACC98E19EE6D4300EB3C5E /* res */,
 				46880B7619C43A67006E1F66 /* CloseNormal.png */,
@@ -291,8 +367,8 @@
 			children = (
 				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
-				46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */,
-				46880B8719C43A87006E1F66 /* HelloWorldScene.h */,
+				43B7492D1B30526900136931 /* MainScene.cpp */,
+				43B7492E1B30526900136931 /* MainScene.h */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -445,29 +521,42 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43B749191B30524500136931 /* Button_Press.png in Resources */,
+				43B7491B1B30524500136931 /* CheckBox_Disable.png in Resources */,
+				43B749291B30524500136931 /* main.csb in Resources */,
+				43B7492B1B30524500136931 /* .gitkeep in Resources */,
+				43B7491F1B30524500136931 /* CheckBox_Press.png in Resources */,
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
 				46880B8119C43A67006E1F66 /* HelloWorld.png in Resources */,
+				43B749171B30524500136931 /* Button_Normal.png in Resources */,
+				43B749211B30524500136931 /* CheckBoxNode_Disable.png in Resources */,
 				46880B7D19C43A67006E1F66 /* CloseSelected.png in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
 				521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */,
 				521A8EA919F11F5000D177D7 /* fonts in Resources */,
+				43B749271B30524500136931 /* Marker Felt.ttf in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
+				43B749151B30524500136931 /* Button_Disable.png in Resources */,
+				43B749131B30524500136931 /* back.jpg in Resources */,
 				3EACC98F19EE6D4300EB3C5E /* res in Resources */,
+				43B7491D1B30524500136931 /* CheckBox_Normal.png in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
 				521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */,
 				46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
+				43B749251B30524500136931 /* arial.ttf in Resources */,
+				43B749231B30524500136931 /* CheckBoxNode_Normal.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,12 +564,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43B749241B30524500136931 /* CheckBoxNode_Normal.png in Resources */,
 				46880B8219C43A67006E1F66 /* HelloWorld.png in Resources */,
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
+				43B749201B30524500136931 /* CheckBox_Press.png in Resources */,
+				43B7492C1B30524500136931 /* .gitkeep in Resources */,
 				3EACC99019EE6D4300EB3C5E /* res in Resources */,
+				43B7491C1B30524500136931 /* CheckBox_Disable.png in Resources */,
 				521A8EAA19F11F5000D177D7 /* fonts in Resources */,
+				43B7492A1B30524500136931 /* main.csb in Resources */,
+				43B7491E1B30524500136931 /* CheckBox_Normal.png in Resources */,
+				43B749161B30524500136931 /* Button_Disable.png in Resources */,
+				43B749141B30524500136931 /* back.jpg in Resources */,
 				46880B7C19C43A67006E1F66 /* CloseNormal.png in Resources */,
 				46880B7E19C43A67006E1F66 /* CloseSelected.png in Resources */,
+				43B749181B30524500136931 /* Button_Normal.png in Resources */,
+				43B7491A1B30524500136931 /* Button_Press.png in Resources */,
+				43B749261B30524500136931 /* arial.ttf in Resources */,
+				43B749221B30524500136931 /* CheckBoxNode_Disable.png in Resources */,
+				43B749281B30524500136931 /* Marker Felt.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,10 +594,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
-				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				43B7492F1B30526900136931 /* MainScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,8 +606,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
+				43B749301B30526900136931 /* MainScene.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
-				46880B8B19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
