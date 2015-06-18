@@ -25,9 +25,16 @@ bool GameScene::init()
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Point origin = Director::getInstance()->getVisibleOrigin();
     
+    //添加游戏背景
     Sprite *pSprite = Sprite::create("background_1.jpg");
     pSprite->setPosition(Vec2(visibleSize.width/2+origin.x, visibleSize.height/2 + origin.y));
     this->addChild(pSprite,0);
+    
+    //添加英雄精灵
+    hero = Hero::create();
+    hero->initHeroSprite("zhaoyun.png");
+    hero->setPosition(Vec2(300, 300));
+    this->addChild(hero,1);
     
     return true;
 }

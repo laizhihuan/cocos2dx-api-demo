@@ -10,6 +10,7 @@
 #define __GeDou__GameScene__
 
 #include "cocos2d.h"
+#include "Hero.h"
 USING_NS_CC;
 
 class GameScene : public Layer
@@ -25,6 +26,9 @@ public:
      *  @param delta 每帧时间间隔
      */
     virtual void update(float delta);
+    
+private:
+    Hero* hero;   //添加英雄
 };
 
 #endif /* defined(__GeDou__GameScene__) */
