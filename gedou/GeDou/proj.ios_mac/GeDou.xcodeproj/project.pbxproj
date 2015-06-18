@@ -42,6 +42,10 @@
 		43B7492C1B30524500136931 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 43B749121B30524500136931 /* .gitkeep */; };
 		43B7492F1B30526900136931 /* MainScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43B7492D1B30526900136931 /* MainScene.cpp */; };
 		43B749301B30526900136931 /* MainScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43B7492D1B30526900136931 /* MainScene.cpp */; };
+		43B749331B324E3300136931 /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43B749311B324E3300136931 /* GameScene.cpp */; };
+		43B749341B324E3300136931 /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43B749311B324E3300136931 /* GameScene.cpp */; };
+		43B749361B324F5900136931 /* background_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 43B749351B324F5900136931 /* background_1.jpg */; };
+		43B749371B324F5900136931 /* background_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 43B749351B324F5900136931 /* background_1.jpg */; };
 		46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7619C43A67006E1F66 /* CloseNormal.png */; };
 		46880B7C19C43A67006E1F66 /* CloseNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7619C43A67006E1F66 /* CloseNormal.png */; };
 		46880B7D19C43A67006E1F66 /* CloseSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7719C43A67006E1F66 /* CloseSelected.png */; };
@@ -149,6 +153,9 @@
 		43B749121B30524500136931 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		43B7492D1B30526900136931 /* MainScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainScene.cpp; sourceTree = "<group>"; };
 		43B7492E1B30526900136931 /* MainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainScene.h; sourceTree = "<group>"; };
+		43B749311B324E3300136931 /* GameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameScene.cpp; sourceTree = "<group>"; };
+		43B749321B324E3300136931 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		43B749351B324F5900136931 /* background_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background_1.jpg; sourceTree = "<group>"; };
 		46880B7619C43A67006E1F66 /* CloseNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseNormal.png; sourceTree = "<group>"; };
 		46880B7719C43A67006E1F66 /* CloseSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseSelected.png; sourceTree = "<group>"; };
 		46880B7A19C43A67006E1F66 /* HelloWorld.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HelloWorld.png; sourceTree = "<group>"; };
@@ -347,6 +354,7 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				43B749351B324F5900136931 /* background_1.jpg */,
 				43B749031B30524500136931 /* back.jpg */,
 				43B749041B30524500136931 /* Default */,
 				43B7490D1B30524500136931 /* fonts */,
@@ -369,6 +377,8 @@
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
 				43B7492D1B30526900136931 /* MainScene.cpp */,
 				43B7492E1B30526900136931 /* MainScene.h */,
+				43B749311B324E3300136931 /* GameScene.cpp */,
+				43B749321B324E3300136931 /* GameScene.h */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -531,6 +541,7 @@
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
+				43B749361B324F5900136931 /* background_1.jpg in Resources */,
 				46880B8119C43A67006E1F66 /* HelloWorld.png in Resources */,
 				43B749171B30524500136931 /* Button_Normal.png in Resources */,
 				43B749211B30524500136931 /* CheckBoxNode_Disable.png in Resources */,
@@ -567,6 +578,7 @@
 				43B749241B30524500136931 /* CheckBoxNode_Normal.png in Resources */,
 				46880B8219C43A67006E1F66 /* HelloWorld.png in Resources */,
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
+				43B749371B324F5900136931 /* background_1.jpg in Resources */,
 				43B749201B30524500136931 /* CheckBox_Press.png in Resources */,
 				43B7492C1B30524500136931 /* .gitkeep in Resources */,
 				3EACC99019EE6D4300EB3C5E /* res in Resources */,
@@ -597,6 +609,7 @@
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				43B749331B324E3300136931 /* GameScene.cpp in Sources */,
 				43B7492F1B30526900136931 /* MainScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -607,6 +620,7 @@
 			files = (
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				43B749301B30526900136931 /* MainScene.cpp in Sources */,
+				43B749341B324E3300136931 /* GameScene.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

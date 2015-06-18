@@ -7,6 +7,7 @@
 //
 
 #include "MainScene.h"
+#include "GameScene.h"
 
 bool MainScene::init()
 {
@@ -16,6 +17,10 @@ bool MainScene::init()
     
     auto *node = CSLoader::createNode("main.csb");
     this->addChild(node);
+    
+    Button *startBtn = static_cast<Button*>(node->getChildByName("start_game"));
+    startBtn->addTouchEventListener(CC_CALLBACK_2(MainScene::touchEvent, this));
+    
     return true;
 }
 
@@ -25,4 +30,25 @@ Scene* MainScene::createScene()
     MainScene *layer = MainScene::create();
     scene->addChild(layer);
     return scene;
+}
+
+void MainScene::touchEvent(Ref *pSender, Widget::TouchEventType type)
+{
+    switch (type) {
+        case Widget::TouchEventType::BEGAN:
+            log("Button down");
+            break;
+        case Widget::TouchEventType::MOVED:
+            log("Button moved");
+            break;
+        case Widget::TouchEventType::ENDED:
+            log("Button ended");
+            Director::getInstance()->replaceScene(GameScene::createScene());
+            break;
+        case Widget::TouchEventType::CANCELED:
+            log("Button canceled");
+            break;
+        default:
+            break;
+    }
 }
