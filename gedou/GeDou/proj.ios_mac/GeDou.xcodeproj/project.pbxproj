@@ -48,8 +48,14 @@
 		43B749371B324F5900136931 /* background_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 43B749351B324F5900136931 /* background_1.jpg */; };
 		43B7493A1B32594D00136931 /* Hero.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43B749381B32594D00136931 /* Hero.cpp */; };
 		43B7493B1B32594D00136931 /* Hero.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43B749381B32594D00136931 /* Hero.cpp */; };
-		43DEA0241B32F2DC00E73929 /* zhoayun.png in Resources */ = {isa = PBXBuildFile; fileRef = 43DEA0231B32F2DC00E73929 /* zhoayun.png */; };
-		43DEA0251B32F2DC00E73929 /* zhoayun.png in Resources */ = {isa = PBXBuildFile; fileRef = 43DEA0231B32F2DC00E73929 /* zhoayun.png */; };
+		43DEA0291B32F6B900E73929 /* Direction_bc.png in Resources */ = {isa = PBXBuildFile; fileRef = 43DEA0261B32F6B900E73929 /* Direction_bc.png */; };
+		43DEA02A1B32F6B900E73929 /* Direction_bc.png in Resources */ = {isa = PBXBuildFile; fileRef = 43DEA0261B32F6B900E73929 /* Direction_bc.png */; };
+		43DEA02B1B32F6B900E73929 /* Direction_bt.png in Resources */ = {isa = PBXBuildFile; fileRef = 43DEA0271B32F6B900E73929 /* Direction_bt.png */; };
+		43DEA02C1B32F6B900E73929 /* Direction_bt.png in Resources */ = {isa = PBXBuildFile; fileRef = 43DEA0271B32F6B900E73929 /* Direction_bt.png */; };
+		43DEA02D1B32F6B900E73929 /* zhaoyun.png in Resources */ = {isa = PBXBuildFile; fileRef = 43DEA0281B32F6B900E73929 /* zhaoyun.png */; };
+		43DEA02E1B32F6B900E73929 /* zhaoyun.png in Resources */ = {isa = PBXBuildFile; fileRef = 43DEA0281B32F6B900E73929 /* zhaoyun.png */; };
+		43DEA0311B32F6CE00E73929 /* HRocker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43DEA02F1B32F6CE00E73929 /* HRocker.cpp */; };
+		43DEA0321B32F6CE00E73929 /* HRocker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 43DEA02F1B32F6CE00E73929 /* HRocker.cpp */; };
 		46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7619C43A67006E1F66 /* CloseNormal.png */; };
 		46880B7C19C43A67006E1F66 /* CloseNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7619C43A67006E1F66 /* CloseNormal.png */; };
 		46880B7D19C43A67006E1F66 /* CloseSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7719C43A67006E1F66 /* CloseSelected.png */; };
@@ -162,7 +168,11 @@
 		43B749351B324F5900136931 /* background_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background_1.jpg; sourceTree = "<group>"; };
 		43B749381B32594D00136931 /* Hero.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Hero.cpp; sourceTree = "<group>"; };
 		43B749391B32594D00136931 /* Hero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hero.h; sourceTree = "<group>"; };
-		43DEA0231B32F2DC00E73929 /* zhoayun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zhoayun.png; sourceTree = "<group>"; };
+		43DEA0261B32F6B900E73929 /* Direction_bc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Direction_bc.png; sourceTree = "<group>"; };
+		43DEA0271B32F6B900E73929 /* Direction_bt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Direction_bt.png; sourceTree = "<group>"; };
+		43DEA0281B32F6B900E73929 /* zhaoyun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zhaoyun.png; sourceTree = "<group>"; };
+		43DEA02F1B32F6CE00E73929 /* HRocker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HRocker.cpp; sourceTree = "<group>"; };
+		43DEA0301B32F6CE00E73929 /* HRocker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRocker.h; sourceTree = "<group>"; };
 		46880B7619C43A67006E1F66 /* CloseNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseNormal.png; sourceTree = "<group>"; };
 		46880B7719C43A67006E1F66 /* CloseSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseSelected.png; sourceTree = "<group>"; };
 		46880B7A19C43A67006E1F66 /* HelloWorld.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HelloWorld.png; sourceTree = "<group>"; };
@@ -361,7 +371,9 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				43DEA0231B32F2DC00E73929 /* zhoayun.png */,
+				43DEA0261B32F6B900E73929 /* Direction_bc.png */,
+				43DEA0271B32F6B900E73929 /* Direction_bt.png */,
+				43DEA0281B32F6B900E73929 /* zhaoyun.png */,
 				43B749351B324F5900136931 /* background_1.jpg */,
 				43B749031B30524500136931 /* back.jpg */,
 				43B749041B30524500136931 /* Default */,
@@ -389,6 +401,8 @@
 				43B749321B324E3300136931 /* GameScene.h */,
 				43B749381B32594D00136931 /* Hero.cpp */,
 				43B749391B32594D00136931 /* Hero.h */,
+				43DEA02F1B32F6CE00E73929 /* HRocker.cpp */,
+				43DEA0301B32F6CE00E73929 /* HRocker.h */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -565,17 +579,19 @@
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
+				43DEA0291B32F6B900E73929 /* Direction_bc.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
 				43B749151B30524500136931 /* Button_Disable.png in Resources */,
 				43B749131B30524500136931 /* back.jpg in Resources */,
+				43DEA02D1B32F6B900E73929 /* zhaoyun.png in Resources */,
 				3EACC98F19EE6D4300EB3C5E /* res in Resources */,
 				43B7491D1B30524500136931 /* CheckBox_Normal.png in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
-				43DEA0241B32F2DC00E73929 /* zhoayun.png in Resources */,
 				521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */,
 				46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */,
+				43DEA02B1B32F6B900E73929 /* Direction_bt.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
 				43B749251B30524500136931 /* arial.ttf in Resources */,
 				43B749231B30524500136931 /* CheckBoxNode_Normal.png in Resources */,
@@ -595,17 +611,19 @@
 				3EACC99019EE6D4300EB3C5E /* res in Resources */,
 				43B7491C1B30524500136931 /* CheckBox_Disable.png in Resources */,
 				521A8EAA19F11F5000D177D7 /* fonts in Resources */,
+				43DEA02C1B32F6B900E73929 /* Direction_bt.png in Resources */,
 				43B7492A1B30524500136931 /* main.csb in Resources */,
 				43B7491E1B30524500136931 /* CheckBox_Normal.png in Resources */,
 				43B749161B30524500136931 /* Button_Disable.png in Resources */,
 				43B749141B30524500136931 /* back.jpg in Resources */,
+				43DEA02E1B32F6B900E73929 /* zhaoyun.png in Resources */,
 				46880B7C19C43A67006E1F66 /* CloseNormal.png in Resources */,
 				46880B7E19C43A67006E1F66 /* CloseSelected.png in Resources */,
 				43B749181B30524500136931 /* Button_Normal.png in Resources */,
 				43B7491A1B30524500136931 /* Button_Press.png in Resources */,
+				43DEA02A1B32F6B900E73929 /* Direction_bc.png in Resources */,
 				43B749261B30524500136931 /* arial.ttf in Resources */,
 				43B749221B30524500136931 /* CheckBoxNode_Disable.png in Resources */,
-				43DEA0251B32F2DC00E73929 /* zhoayun.png in Resources */,
 				43B749281B30524500136931 /* Marker Felt.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -619,6 +637,7 @@
 			files = (
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
+				43DEA0311B32F6CE00E73929 /* HRocker.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				43B7493A1B32594D00136931 /* Hero.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
@@ -633,6 +652,7 @@
 			files = (
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				43B749301B30526900136931 /* MainScene.cpp in Sources */,
+				43DEA0321B32F6CE00E73929 /* HRocker.cpp in Sources */,
 				43B749341B324E3300136931 /* GameScene.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 				43B7493B1B32594D00136931 /* Hero.cpp in Sources */,
