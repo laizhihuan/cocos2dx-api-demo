@@ -106,6 +106,8 @@ private:
     virtual void onTouchMoved(Touch *touch, Event *event);
     virtual void onTouchEnded(Touch *touch, Event *event);
     
+    virtual void update(float delta);
+    
 };
 
 #endif /* defined(__GeDou__HRocker__) */

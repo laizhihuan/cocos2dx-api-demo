@@ -36,10 +36,25 @@ bool GameScene::init()
     hero->setPosition(Vec2(300, 300));
     this->addChild(hero,1);
     
+    //添加摇杆
+    rocker = HRocker::createHRocker("Direction_bt.png", "Direction_bc.png", Vec2(110,60));
+    this->addChild(rocker,2);
+    rocker->startRocker(true);
+    
+    //启动update事件
+    this->scheduleUpdate();
+    
     return true;
 }
 
 void GameScene::update(float delta)
 {
-    
+    switch (rocker->rockerDirection) {
+        case 1:
+            //hero->setAnimation(<#const char *namePlist#>, <#const char *namePng#>, <#const char *nameEach#>, <#const unsigned int num#>,)
+            break;
+            
+        default:
+            break;
+    }
 }

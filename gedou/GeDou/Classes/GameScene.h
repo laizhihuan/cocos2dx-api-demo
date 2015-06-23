@@ -11,6 +11,7 @@
 
 #include "cocos2d.h"
 #include "Hero.h"
+#include "HRocker.h"
 USING_NS_CC;
 
 class GameScene : public Layer
@@ -28,7 +29,8 @@ public:
     virtual void update(float delta);
     
 private:
-    Hero* hero;   //添加英雄
+    Hero* hero;      //添加英雄
+    HRocker* rocker; //添加摇杆
 };
 
 #endif /* defined(__GeDou__GameScene__) */

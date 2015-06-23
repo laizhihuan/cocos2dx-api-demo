@@ -102,6 +102,74 @@ float HRocker::getRad(Vec2 pos1, Vec2 pos2)
     return rad;
 }
 
+Vec2 getAngelePosition(float r, float angle) {
+    return Vec2(r*cos(angle),r*sin(angle));
+}
+
+bool HRocker::onTouchBegan(Touch *touch, Event *event)
+{
+    Vec2 point = touch->getLocation();
+    Sprite *rocker = (Sprite*)this->getChildByTag(tag_rocker);
+    if (rocker->getBoundingBox().containsPoint(point)) {
+        isCanMove = true;
+        log("begin");
+    }
+    return true;
+}
+
+void HRocker::onTouchMoved(Touch *touch, Event *event)
+{
+    if (!isCanMove) {
+        return;
+    }
+    
+    Vec2 point = touch->getLocation();
+    Sprite *rocker = (Sprite*)this->getChildByTag(tag_rocker);
+    
+    float angle = getRad(rockerBGPostion, point);
+    if (sqrt(pow((rockerBGPostion.x - point.x),2) + pow((rockerBGPostion.y - point.y), 2)) >= rockerBGR) {
+        rocker->setPosition(getAngelePosition(rockerBGR, angle)+Vec2(rockerBGPostion.x,rockerBGPostion.y));
+    } else {
+        rocker->setPosition(point);
+    }
+    
+    if(angle >= -PI/4 && angle < PI/4) {
+        rockerDirection = rocker_right;
+        rockerRun = false;
+
+    } else if(angle>= PI/4 && angle < 3*PI/4) {
+        rockerDirection = rocker_up;
+    } else if((angle >= 3* PI/4 && angle <= PI) || (angle >= -PI && angle < -3*PI/4)) {
+        rockerDirection = rocker_left;
+        rockerRun = true;
+    } else if(angle >= -3*PI/4 && angle<-PI/4) {
+        rockerDirection = rocker_down;
+    }
+    
+    log("%d", rockerDirection);
+}
+
+void HRocker::onTouchEnded(Touch *touch, Event *event)
+{
+    if (!isCanMove) {
+        return;
+    }
+    Sprite *rockerBg = (Sprite*)this->getChildByTag(tag_rockerBG);
+    Sprite *rocker = (Sprite*)this->getChildByTag(tag_rocker);
+    rocker->stopAllActions();
+    rocker->runAction(MoveTo::create(0.08f, rockerBg->getPosition()));
+    isCanMove = false;
+    rockerDirection = rocker_stay;
+    log("%d end",rockerDirection);
+}
+
+void HRocker::update(float dt)
+{
+    if (isCanMove) {
+        
+    }
+}
+
 
 
 
