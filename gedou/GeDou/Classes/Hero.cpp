@@ -37,31 +37,40 @@ void Hero::setAnimation(const char *namePlist, const char *namePng, const char *
         return;
     }
     
-    SpriteFrameCache *mFrameCache = SpriteFrameCache::getInstance();
-    mFrameCache->addSpriteFramesWithFile(namePlist,namePng);
-    
-    //用一个列表保存所有的SpriteFrameCache
-    Vector<SpriteFrame*> frameArray(num);
-    
-    unsigned int i;
-    for (i=2; i<=num; i++) {
-        SpriteFrame* frame = mFrameCache->getSpriteFrameByName(String::createWithFormat("%s%d.png",nameEach,i)->getCString());
-        frameArray.insert(i, frame);
-    }
-    
-    Animation* animation = Animation::createWithSpriteFrames(frameArray);
-    
-    if (heroDirection != runDirection) {
-        heroDirection = runDirection;
-    }
-    
-    animation->setLoops(-1); //表示无限循环播放
-    animation->setDelayPerUnit(0.1f); //每俩张图片的时间间隔，图片数目越小，间隔最小就越小
-    
-    Animate* act = Animate::create(animation);
-    
+    auto arimation = getAnimation(namePlist, namePng, nameEach, num, runDirection);
+    auto action = Animate::create(arimation);
+    auto ccback = CallFunc::create(CC_CALLBACK_0(Hero::runEnd, this));
+    auto act = Sequence::create(action,ccback,NULL);
     mHeroSprite->runAction(act);
+    
     isRunning = true;
+}
+
+void Hero::runEnd()
+{
+    isRunning = false;
+}
+
+Animation* Hero::getAnimation(const char *namePlist, const char *namePng, const char *nameEach, const unsigned int num, bool runDirection)
+{
+    auto cache = SpriteFrameCache::getInstance();
+    cache->addSpriteFramesWithFile(namePlist, namePng);
+    
+    mHeroSprite->setTexture(String::createWithFormat("%s1.png",nameEach)->getCString());
+    
+    auto spriteBatch = SpriteBatchNode::create(namePng);
+    addChild(spriteBatch);
+    
+    Vector<SpriteFrame*> animFrames(num);
+    
+    for (int i=1; i < num; i++) {
+        auto frame = cache->getSpriteFrameByName(String::createWithFormat("%s%d.png",nameEach,i)->getCString());
+        animFrames.pushBack(frame);
+    }
+    
+    auto animation = Animation::createWithSpriteFrames(animFrames, 0.3f);
+    return animation;
+    
 }
 
 void Hero::stopAnimation()
@@ -76,6 +85,7 @@ void Hero::stopAnimation()
     
     mHeroSprite=Sprite::create(heroName); //恢复精灵原来的贴图样子
     this->addChild(mHeroSprite);
+    
     isRunning = false;
 }
 

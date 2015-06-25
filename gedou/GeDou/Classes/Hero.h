@@ -38,6 +38,11 @@ public:
     void setAnimation(const char *namePlist,const char *namePng,const char *nameEach,
                       const unsigned int num,bool runDirection);
     
+    Animation* getAnimation(const char *namePlist,const char *namePng,const char *nameEach,
+                            const unsigned int num,bool runDirection);
+    
+    void runEnd();
+    
     void stopAnimation();
     
     bool isRunning;

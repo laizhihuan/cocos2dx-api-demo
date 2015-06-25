@@ -14,6 +14,14 @@
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		3EACC98F19EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		3EACC99019EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
+		4320A9251B3BEF7500F71F5C /* attack1_animation.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4320A9211B3BEF7500F71F5C /* attack1_animation.plist */; };
+		4320A9261B3BEF7500F71F5C /* attack1_animation.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4320A9211B3BEF7500F71F5C /* attack1_animation.plist */; };
+		4320A9271B3BEF7500F71F5C /* attack1_animation.png in Resources */ = {isa = PBXBuildFile; fileRef = 4320A9221B3BEF7500F71F5C /* attack1_animation.png */; };
+		4320A9281B3BEF7500F71F5C /* attack1_animation.png in Resources */ = {isa = PBXBuildFile; fileRef = 4320A9221B3BEF7500F71F5C /* attack1_animation.png */; };
+		4320A9291B3BEF7500F71F5C /* run_animation.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4320A9231B3BEF7500F71F5C /* run_animation.plist */; };
+		4320A92A1B3BEF7500F71F5C /* run_animation.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4320A9231B3BEF7500F71F5C /* run_animation.plist */; };
+		4320A92B1B3BEF7500F71F5C /* run_animation.png in Resources */ = {isa = PBXBuildFile; fileRef = 4320A9241B3BEF7500F71F5C /* run_animation.png */; };
+		4320A92C1B3BEF7500F71F5C /* run_animation.png in Resources */ = {isa = PBXBuildFile; fileRef = 4320A9241B3BEF7500F71F5C /* run_animation.png */; };
 		43B749131B30524500136931 /* back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 43B749031B30524500136931 /* back.jpg */; };
 		43B749141B30524500136931 /* back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 43B749031B30524500136931 /* back.jpg */; };
 		43B749151B30524500136931 /* Button_Disable.png in Resources */ = {isa = PBXBuildFile; fileRef = 43B749051B30524500136931 /* Button_Disable.png */; };
@@ -148,6 +156,10 @@
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3EACC98E19EE6D4300EB3C5E /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
+		4320A9211B3BEF7500F71F5C /* attack1_animation.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = attack1_animation.plist; sourceTree = "<group>"; };
+		4320A9221B3BEF7500F71F5C /* attack1_animation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = attack1_animation.png; sourceTree = "<group>"; };
+		4320A9231B3BEF7500F71F5C /* run_animation.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = run_animation.plist; sourceTree = "<group>"; };
+		4320A9241B3BEF7500F71F5C /* run_animation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = run_animation.png; sourceTree = "<group>"; };
 		43B749031B30524500136931 /* back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = back.jpg; sourceTree = "<group>"; };
 		43B749051B30524500136931 /* Button_Disable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button_Disable.png; sourceTree = "<group>"; };
 		43B749061B30524500136931 /* Button_Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button_Normal.png; sourceTree = "<group>"; };
@@ -371,6 +383,10 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4320A9211B3BEF7500F71F5C /* attack1_animation.plist */,
+				4320A9221B3BEF7500F71F5C /* attack1_animation.png */,
+				4320A9231B3BEF7500F71F5C /* run_animation.plist */,
+				4320A9241B3BEF7500F71F5C /* run_animation.png */,
 				43DEA0261B32F6B900E73929 /* Direction_bc.png */,
 				43DEA0271B32F6B900E73929 /* Direction_bt.png */,
 				43DEA0281B32F6B900E73929 /* zhaoyun.png */,
@@ -559,6 +575,7 @@
 				43B7491B1B30524500136931 /* CheckBox_Disable.png in Resources */,
 				43B749291B30524500136931 /* main.csb in Resources */,
 				43B7492B1B30524500136931 /* .gitkeep in Resources */,
+				4320A92B1B3BEF7500F71F5C /* run_animation.png in Resources */,
 				43B7491F1B30524500136931 /* CheckBox_Press.png in Resources */,
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
@@ -589,12 +606,15 @@
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
+				4320A9271B3BEF7500F71F5C /* attack1_animation.png in Resources */,
 				521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */,
 				46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */,
 				43DEA02B1B32F6B900E73929 /* Direction_bt.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
 				43B749251B30524500136931 /* arial.ttf in Resources */,
 				43B749231B30524500136931 /* CheckBoxNode_Normal.png in Resources */,
+				4320A9251B3BEF7500F71F5C /* attack1_animation.plist in Resources */,
+				4320A9291B3BEF7500F71F5C /* run_animation.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,7 +623,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				43B749241B30524500136931 /* CheckBoxNode_Normal.png in Resources */,
+				4320A92A1B3BEF7500F71F5C /* run_animation.plist in Resources */,
 				46880B8219C43A67006E1F66 /* HelloWorld.png in Resources */,
+				4320A9281B3BEF7500F71F5C /* attack1_animation.png in Resources */,
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
 				43B749371B324F5900136931 /* background_1.jpg in Resources */,
 				43B749201B30524500136931 /* CheckBox_Press.png in Resources */,
@@ -615,10 +637,12 @@
 				43B7492A1B30524500136931 /* main.csb in Resources */,
 				43B7491E1B30524500136931 /* CheckBox_Normal.png in Resources */,
 				43B749161B30524500136931 /* Button_Disable.png in Resources */,
+				4320A92C1B3BEF7500F71F5C /* run_animation.png in Resources */,
 				43B749141B30524500136931 /* back.jpg in Resources */,
 				43DEA02E1B32F6B900E73929 /* zhaoyun.png in Resources */,
 				46880B7C19C43A67006E1F66 /* CloseNormal.png in Resources */,
 				46880B7E19C43A67006E1F66 /* CloseSelected.png in Resources */,
+				4320A9261B3BEF7500F71F5C /* attack1_animation.plist in Resources */,
 				43B749181B30524500136931 /* Button_Normal.png in Resources */,
 				43B7491A1B30524500136931 /* Button_Press.png in Resources */,
 				43DEA02A1B32F6B900E73929 /* Direction_bc.png in Resources */,

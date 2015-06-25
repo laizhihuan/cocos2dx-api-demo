@@ -133,6 +133,7 @@ void HRocker::onTouchMoved(Touch *touch, Event *event)
         rocker->setPosition(point);
     }
     
+    //判断方向
     if(angle >= -PI/4 && angle < PI/4) {
         rockerDirection = rocker_right;
         rockerRun = false;

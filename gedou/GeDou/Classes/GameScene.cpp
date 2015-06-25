@@ -35,6 +35,7 @@ bool GameScene::init()
     hero->initHeroSprite("zhaoyun.png");
     hero->setPosition(Vec2(300, 300));
     this->addChild(hero,1);
+    //hero->setAnimation("run_animation.plist", "run_animation.png", 8, true);
     
     //添加摇杆
     rocker = HRocker::createHRocker("Direction_bt.png", "Direction_bc.png", Vec2(110,60));
@@ -51,10 +52,28 @@ void GameScene::update(float delta)
 {
     switch (rocker->rockerDirection) {
         case 1:
-            //hero->setAnimation(<#const char *namePlist#>, <#const char *namePng#>, <#const char *nameEach#>, <#const unsigned int num#>,)
+            hero->setAnimation("run_animation.plist", "run_animation.png", "run_", 8, rocker->rockerRun);
+            //向右走
+            hero->setPosition(Vec2(hero->getPosition().x+1,hero->getPosition().y));
             break;
-            
+        case 2:
+            hero->setAnimation("run_animation.plist", "run_animation.png", "run_", 8, rocker->rockerRun);
+            //向上走
+            hero->setPosition(Vec2(hero->getPosition().x,hero->getPosition().y+1));
+            break;
+        case 3:
+            hero->setAnimation("run_animation.plist", "run_animation.png", "run_", 8, rocker->rockerRun);
+            //向左走
+            hero->setPosition(Vec2(hero->getPosition().x-1,hero->getPosition().y));
+            break;
+        case 4:
+            hero->setAnimation("run_animation.plist", "run_animation.png", "run_", 8, rocker->rockerRun);
+            //向下走
+            hero->setPosition(Vec2(hero->getPosition().x,hero->getPosition().y-1));
+            break;
         default:
+            //停止所有的动画和运动
+            hero->stopAnimation();
             break;
     }
 }
