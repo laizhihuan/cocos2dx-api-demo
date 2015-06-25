@@ -31,9 +31,12 @@ bool GameScene::init()
     this->addChild(attackBtn,7);
     
     //添加游戏背景
-    Sprite *pSprite = Sprite::create("background_1.jpg");
-    pSprite->setPosition(Vec2(visibleSize.width/2+origin.x, visibleSize.height/2 + origin.y));
-    this->addChild(pSprite,0);
+    //Sprite *pSprite = Sprite::create("background_1.jpg");
+    //pSprite->setPosition(Vec2(visibleSize.width/2+origin.x, visibleSize.height/2 + origin.y));
+    //this->addChild(pSprite,0);
+    node_map = IMap::create();
+    node_map->initMap("12.png", visibleSize);
+    this->addChild(node_map,0);
     
     //添加英雄精灵
     hero = Hero::create();
@@ -55,11 +58,21 @@ bool GameScene::init()
 
 void GameScene::update(float delta)
 {
+    
+    Size visibleSize = Director::getInstance()->getVisibleSize();
+    
     switch (rocker->rockerDirection) {
         case 1:
             hero->setAnimation("run_animation.plist", "run_animation.png", "run_", 8, rocker->rockerRun);
             //向右走
-            hero->setPosition(Vec2(hero->getPosition().x+1,hero->getPosition().y));
+            //不让精灵超出右边，
+            if (hero->getPositionX()<=visibleSize.width - 8) {
+                if (!hero->judgePostion(visibleSize) || node_map->judgeMap(hero, visibleSize)) {
+                    hero->setPosition(Vec2(hero->getPosition().x+1, hero->getPosition().y));
+                }
+                node_map->moveMap(hero, visibleSize);
+            }
+            //hero->setPosition(Vec2(hero->getPosition().x+1,hero->getPosition().y));
             break;
         case 2:
             hero->setAnimation("run_animation.plist", "run_animation.png", "run_", 8, rocker->rockerRun);
@@ -69,7 +82,9 @@ void GameScene::update(float delta)
         case 3:
             hero->setAnimation("run_animation.plist", "run_animation.png", "run_", 8, rocker->rockerRun);
             //向左走
-            hero->setPosition(Vec2(hero->getPosition().x-1,hero->getPosition().y));
+            if(hero->getPositionX() >= 8) {
+                hero->setPosition(Vec2(hero->getPosition().x-1,hero->getPosition().y));
+            }
             break;
         case 4:
             hero->setAnimation("run_animation.plist", "run_animation.png", "run_", 8, rocker->rockerRun);
@@ -82,9 +97,9 @@ void GameScene::update(float delta)
             break;
     }
     
+    //攻击
     if (attackBtn->isHighlighted()) {
         hero->attackAnimation("attack1_animation.plist", "attack1_animation.png", "attack_", 6, rocker->rockerRun);
         log("attack----->");
     }
-    
 }

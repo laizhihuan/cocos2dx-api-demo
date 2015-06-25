@@ -117,6 +117,15 @@ void Hero::stopAnimation()
     isRunning = false;
 }
 
+bool Hero::judgePostion(Size visibleSize)
+{
+    if (this->getPositionX() != visibleSize.width/2) {
+        return false;
+    } else {
+        return true;
+    }
+}
+
 
 
 

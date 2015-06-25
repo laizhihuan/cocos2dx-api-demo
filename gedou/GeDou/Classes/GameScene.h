@@ -15,6 +15,8 @@
 #include "Hero.h"
 #include "HRocker.h"
 
+#include "IMap.h"
+
 USING_NS_CC;
 
 class GameScene : public Layer
@@ -35,7 +37,9 @@ private:
     Hero* hero;      //添加英雄
     HRocker* rocker; //添加摇杆
     
-    cocos2d::extension::ControlButton *attackBtn;
+    cocos2d::extension::ControlButton *attackBtn; //添加攻击按钮
+    
+    IMap* node_map; //添加副本地图
 };
 
 #endif /* defined(__GeDou__GameScene__) */

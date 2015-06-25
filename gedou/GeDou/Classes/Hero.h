@@ -59,6 +59,8 @@ public:
      */
     void attackEnd();
     
+    bool judgePostion(Size visibleSize);
+    
     void runEnd();
     
     void stopAnimation();
