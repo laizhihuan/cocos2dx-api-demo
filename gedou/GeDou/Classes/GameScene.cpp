@@ -25,6 +25,11 @@ bool GameScene::init()
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Point origin = Director::getInstance()->getVisibleOrigin();
     
+    //添加攻击按钮
+    attackBtn = cocos2d::extension::ControlButton::create("Attack", "fonts/Marker Felt.ttf", 30);
+    attackBtn->setPosition(Vec2(visibleSize.width-200,100));
+    this->addChild(attackBtn,7);
+    
     //添加游戏背景
     Sprite *pSprite = Sprite::create("background_1.jpg");
     pSprite->setPosition(Vec2(visibleSize.width/2+origin.x, visibleSize.height/2 + origin.y));
@@ -76,4 +81,10 @@ void GameScene::update(float delta)
             hero->stopAnimation();
             break;
     }
+    
+    if (attackBtn->isHighlighted()) {
+        hero->attackAnimation("attack1_animation.plist", "attack1_animation.png", "attack_", 6, rocker->rockerRun);
+        log("attack----->");
+    }
+    
 }

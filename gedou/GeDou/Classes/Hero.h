@@ -38,8 +38,26 @@ public:
     void setAnimation(const char *namePlist,const char *namePng,const char *nameEach,
                       const unsigned int num,bool runDirection);
     
+    
     Animation* getAnimation(const char *namePlist,const char *namePng,const char *nameEach,
                             const unsigned int num,bool runDirection);
+    
+    /**
+     *  攻击动画
+     *
+     *  @param name_plist <#name_plist description#>
+     *  @param name_png   <#name_png description#>
+     *  @param name_each  <#name_each description#>
+     *  @param num        <#num description#>
+     *  @param runDirect  <#runDirect description#>
+     */
+    void attackAnimation(const char *name_plist, const char *name_png, const char *name_each,
+                         const unsigned int num, bool runDirect);
+    
+    /**
+     *  攻击动画结束
+     */
+    void attackEnd();
     
     void runEnd();
     
@@ -48,6 +66,8 @@ public:
     bool isRunning;
     
     bool heroDirection;
+    
+    bool isAttack;
     
     CREATE_FUNC(Hero);
 

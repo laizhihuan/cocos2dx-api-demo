@@ -13,6 +13,7 @@ Hero::Hero(void)
     isRunning = false;
     heroDirection = false;
     heroName = NULL;
+    isAttack = false;
 }
 
 Hero::~Hero()
@@ -71,6 +72,33 @@ Animation* Hero::getAnimation(const char *namePlist, const char *namePng, const 
     auto animation = Animation::createWithSpriteFrames(animFrames, 0.3f);
     return animation;
     
+}
+
+void Hero::attackAnimation(const char *name_plist, const char *name_png, const char *name_each,
+                     const unsigned int num, bool runDirect)
+{
+    if (isAttack) {
+        return;
+    }
+    
+    auto ani = getAnimation(name_plist, name_png, name_each, num, runDirect);
+    auto action = Animate::create(ani);
+    
+    auto ccBack = CallFunc::create(CC_CALLBACK_0(Hero::attackEnd, this));
+    auto act = Sequence::create(action,ccBack, NULL);
+    mHeroSprite->runAction(act);
+    isAttack = true;
+
+}
+
+void Hero::attackEnd()
+{
+    //恢复精灵原来的init贴图
+    this->removeChild(mHeroSprite,true);
+    mHeroSprite=Sprite::create(heroName);
+    this->addChild(mHeroSprite);
+    
+    isAttack = false;
 }
 
 void Hero::stopAnimation()

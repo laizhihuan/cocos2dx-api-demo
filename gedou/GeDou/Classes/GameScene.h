@@ -10,8 +10,11 @@
 #define __GeDou__GameScene__
 
 #include "cocos2d.h"
+#include "extensions/cocos-ext.h"
+
 #include "Hero.h"
 #include "HRocker.h"
+
 USING_NS_CC;
 
 class GameScene : public Layer
@@ -31,6 +34,8 @@ public:
 private:
     Hero* hero;      //添加英雄
     HRocker* rocker; //添加摇杆
+    
+    cocos2d::extension::ControlButton *attackBtn;
 };
 
 #endif /* defined(__GeDou__GameScene__) */
