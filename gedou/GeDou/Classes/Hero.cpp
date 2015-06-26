@@ -20,14 +20,14 @@ Hero::~Hero()
 {
 }
 
-void Hero::initHeroSprite(char *heroName)
+void Hero::initHeroSprite(const char *heroName)
 {
     this->heroName = heroName;
     this->mHeroSprite = Sprite::create(heroName);
     this->addChild(mHeroSprite);
 }
 
-void Hero::setAnimation(const char *namePlist, const char *namePng, const char *nameEach, const unsigned int num, bool runDirection)
+void Hero::setAnimation(const char *nameEach, const unsigned int num, bool runDirection)
 {
     if (heroDirection != runDirection) {
         heroDirection = runDirection;
@@ -38,7 +38,7 @@ void Hero::setAnimation(const char *namePlist, const char *namePng, const char *
         return;
     }
     
-    auto arimation = getAnimation(namePlist, namePng, nameEach, num, runDirection);
+    auto arimation = getAnimation(nameEach, num, runDirection);
     auto action = Animate::create(arimation);
     auto ccback = CallFunc::create(CC_CALLBACK_0(Hero::runEnd, this));
     auto act = Sequence::create(action,ccback,NULL);
@@ -52,36 +52,28 @@ void Hero::runEnd()
     isRunning = false;
 }
 
-Animation* Hero::getAnimation(const char *namePlist, const char *namePng, const char *nameEach, const unsigned int num, bool runDirection)
+Animation* Hero::getAnimation(const char *nameEach, const unsigned int num, bool runDirection)
 {
-    auto cache = SpriteFrameCache::getInstance();
-    cache->addSpriteFramesWithFile(namePlist, namePng);
-    
-    mHeroSprite->setTexture(String::createWithFormat("%s1.png",nameEach)->getCString());
-    
-    auto spriteBatch = SpriteBatchNode::create(namePng);
-    addChild(spriteBatch);
-    
-    Vector<SpriteFrame*> animFrames(num);
+    auto animation = Animation::create();
     
     for (int i=1; i < num; i++) {
-        auto frame = cache->getSpriteFrameByName(String::createWithFormat("%s%d.png",nameEach,i)->getCString());
-        animFrames.pushBack(frame);
+        animation->addSpriteFrameWithFile(String::createWithFormat("%s%d.png",nameEach,i)->getCString());
     }
     
-    auto animation = Animation::createWithSpriteFrames(animFrames, 0.3f);
+    animation->setDelayPerUnit(0.1f);
+    animation->setRestoreOriginalFrame(true);
+    animation->setLoops(1);
     return animation;
     
 }
 
-void Hero::attackAnimation(const char *name_plist, const char *name_png, const char *name_each,
-                     const unsigned int num, bool runDirect)
+void Hero::attackAnimation(const char *name_each,const unsigned int num, bool runDirect)
 {
     if (isAttack) {
         return;
     }
     
-    auto ani = getAnimation(name_plist, name_png, name_each, num, runDirect);
+    auto ani = getAnimation(name_each, num, runDirect);
     auto action = Animate::create(ani);
     
     auto ccBack = CallFunc::create(CC_CALLBACK_0(Hero::attackEnd, this));

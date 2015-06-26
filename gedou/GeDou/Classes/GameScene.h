@@ -16,6 +16,7 @@
 #include "HRocker.h"
 #include "IMap.h"
 #include "HpProgress.h"
+#include "Monster.h"
 
 USING_NS_CC;
 
@@ -42,6 +43,8 @@ private:
     IMap* node_map; //添加副本地图
     
     HpProgressView *m_progress_view; //添加血量
+    
+    Monster *monster_1; //添加怪物
 };
 
 #endif /* defined(__GeDou__GameScene__) */

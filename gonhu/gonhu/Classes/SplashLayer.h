@@ -27,7 +27,11 @@ private:
     void loadingTextureCallback(Texture2D * texture);
     void loadingAudio();
     
-    
+    /**
+     *  切换场景
+     *
+     *  @param dt
+     */
     void nextScene(float dt);
     
     void onExit();

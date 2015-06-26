@@ -24,35 +24,24 @@ public:
      
      :returns: <#return value description#>
      */
-    void initHeroSprite(char *heroName);
+    void initHeroSprite(const char *heroName);
     
     /**
      *  设置英雄的动画，可以是跑，攻击，死亡，受伤等
      *
-     *  @param name_plist    <#name_plist description#>
-     *  @param name_png      <#name_png description#>
      *  @param name_each     英雄图片中每一小张图片的公共名称部分
      *  @param num           图片数量
      *  @param run_direction 英雄朝向，false朝右
      */
-    void setAnimation(const char *namePlist,const char *namePng,const char *nameEach,
-                      const unsigned int num,bool runDirection);
+    void setAnimation(const char *nameEach,const unsigned int num,bool runDirection);
     
     
-    Animation* getAnimation(const char *namePlist,const char *namePng,const char *nameEach,
-                            const unsigned int num,bool runDirection);
+    Animation* getAnimation(const char *nameEach,const unsigned int num,bool runDirection);
     
     /**
      *  攻击动画
-     *
-     *  @param name_plist <#name_plist description#>
-     *  @param name_png   <#name_png description#>
-     *  @param name_each  <#name_each description#>
-     *  @param num        <#num description#>
-     *  @param runDirect  <#runDirect description#>
      */
-    void attackAnimation(const char *name_plist, const char *name_png, const char *name_each,
-                         const unsigned int num, bool runDirect);
+    void attackAnimation(const char *name_each,const unsigned int num, bool runDirect);
     
     /**
      *  攻击动画结束
@@ -75,7 +64,7 @@ public:
 
 private:
     Sprite* mHeroSprite;
-    char *heroName;
+    const char *heroName;
     
 };
 
