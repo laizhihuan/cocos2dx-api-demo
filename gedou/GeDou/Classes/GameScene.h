@@ -14,8 +14,8 @@
 
 #include "Hero.h"
 #include "HRocker.h"
-
 #include "IMap.h"
+#include "HpProgress.h"
 
 USING_NS_CC;
 
@@ -40,6 +40,8 @@ private:
     cocos2d::extension::ControlButton *attackBtn; //添加攻击按钮
     
     IMap* node_map; //添加副本地图
+    
+    HpProgressView *m_progress_view; //添加血量
 };
 
 #endif /* defined(__GeDou__GameScene__) */

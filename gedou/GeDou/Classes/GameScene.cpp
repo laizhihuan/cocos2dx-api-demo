@@ -34,6 +34,8 @@ bool GameScene::init()
     //Sprite *pSprite = Sprite::create("background_1.jpg");
     //pSprite->setPosition(Vec2(visibleSize.width/2+origin.x, visibleSize.height/2 + origin.y));
     //this->addChild(pSprite,0);
+    
+    //添加地图
     node_map = IMap::create();
     node_map->initMap("12.png", visibleSize);
     this->addChild(node_map,0);
@@ -41,7 +43,7 @@ bool GameScene::init()
     //添加英雄精灵
     hero = Hero::create();
     hero->initHeroSprite("zhaoyun.png");
-    hero->setPosition(Vec2(300, 300));
+    hero->setPosition(Vec2(300, 100));
     this->addChild(hero,1);
     //hero->setAnimation("run_animation.plist", "run_animation.png", 8, true);
     
@@ -49,6 +51,25 @@ bool GameScene::init()
     rocker = HRocker::createHRocker("Direction_bt.png", "Direction_bc.png", Vec2(110,60));
     this->addChild(rocker,2);
     rocker->startRocker(true);
+    
+    //设置英雄血条
+    m_progress_view = new HpProgressView();
+    m_progress_view->setPosition(Vec2(150, 450));
+    m_progress_view->setScale(2.2f);
+    m_progress_view->setBackgroundTexture("xue_back.png");
+    m_progress_view->setForegroundTexture("xue_fore.png");
+    m_progress_view->setTotalProgress(100.0f);
+    m_progress_view->setCurrentProgress(100.0f);
+    this->addChild(m_progress_view,2);
+    
+    //添加血条样式
+    Sprite *xuekuang = Sprite::create("kuang.png");
+    xuekuang->setPosition(Vec2(m_progress_view->getPositionX(), m_progress_view->getPositionY()));
+    Sprite *touxiang = Sprite::create("touxiang.png");
+    touxiang->setPosition(m_progress_view->getPositionX()-120,m_progress_view->getPositionY());
+    this->addChild(touxiang,2);
+    this->addChild(xuekuang,2);
+    
     
     //启动update事件
     this->scheduleUpdate();

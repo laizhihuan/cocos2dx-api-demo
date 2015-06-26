@@ -26,6 +26,16 @@
 		4320A9301B3C29D600F71F5C /* IMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4320A92D1B3C29D600F71F5C /* IMap.cpp */; };
 		4320A9331B3C382B00F71F5C /* 12.png in Resources */ = {isa = PBXBuildFile; fileRef = 4320A9321B3C382B00F71F5C /* 12.png */; };
 		4320A9341B3C382B00F71F5C /* 12.png in Resources */ = {isa = PBXBuildFile; fileRef = 4320A9321B3C382B00F71F5C /* 12.png */; };
+		4320A9371B3CDF6D00F71F5C /* HpProgress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4320A9351B3CDF6D00F71F5C /* HpProgress.cpp */; };
+		4320A9381B3CDF6D00F71F5C /* HpProgress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4320A9351B3CDF6D00F71F5C /* HpProgress.cpp */; };
+		4320A93D1B3CE74200F71F5C /* kuang.png in Resources */ = {isa = PBXBuildFile; fileRef = 4320A9391B3CE74200F71F5C /* kuang.png */; };
+		4320A93E1B3CE74200F71F5C /* kuang.png in Resources */ = {isa = PBXBuildFile; fileRef = 4320A9391B3CE74200F71F5C /* kuang.png */; };
+		4320A93F1B3CE74200F71F5C /* touxiang.png in Resources */ = {isa = PBXBuildFile; fileRef = 4320A93A1B3CE74200F71F5C /* touxiang.png */; };
+		4320A9401B3CE74200F71F5C /* touxiang.png in Resources */ = {isa = PBXBuildFile; fileRef = 4320A93A1B3CE74200F71F5C /* touxiang.png */; };
+		4320A9411B3CE74200F71F5C /* xue_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 4320A93B1B3CE74200F71F5C /* xue_back.png */; };
+		4320A9421B3CE74200F71F5C /* xue_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 4320A93B1B3CE74200F71F5C /* xue_back.png */; };
+		4320A9431B3CE74200F71F5C /* xue_fore.png in Resources */ = {isa = PBXBuildFile; fileRef = 4320A93C1B3CE74200F71F5C /* xue_fore.png */; };
+		4320A9441B3CE74200F71F5C /* xue_fore.png in Resources */ = {isa = PBXBuildFile; fileRef = 4320A93C1B3CE74200F71F5C /* xue_fore.png */; };
 		43B749131B30524500136931 /* back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 43B749031B30524500136931 /* back.jpg */; };
 		43B749141B30524500136931 /* back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 43B749031B30524500136931 /* back.jpg */; };
 		43B749151B30524500136931 /* Button_Disable.png in Resources */ = {isa = PBXBuildFile; fileRef = 43B749051B30524500136931 /* Button_Disable.png */; };
@@ -167,6 +177,12 @@
 		4320A92D1B3C29D600F71F5C /* IMap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = IMap.cpp; sourceTree = "<group>"; };
 		4320A92E1B3C29D600F71F5C /* IMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMap.h; sourceTree = "<group>"; };
 		4320A9321B3C382B00F71F5C /* 12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 12.png; sourceTree = "<group>"; };
+		4320A9351B3CDF6D00F71F5C /* HpProgress.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HpProgress.cpp; sourceTree = "<group>"; };
+		4320A9361B3CDF6D00F71F5C /* HpProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HpProgress.h; sourceTree = "<group>"; };
+		4320A9391B3CE74200F71F5C /* kuang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kuang.png; sourceTree = "<group>"; };
+		4320A93A1B3CE74200F71F5C /* touxiang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = touxiang.png; sourceTree = "<group>"; };
+		4320A93B1B3CE74200F71F5C /* xue_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xue_back.png; sourceTree = "<group>"; };
+		4320A93C1B3CE74200F71F5C /* xue_fore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xue_fore.png; sourceTree = "<group>"; };
 		43B749031B30524500136931 /* back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = back.jpg; sourceTree = "<group>"; };
 		43B749051B30524500136931 /* Button_Disable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button_Disable.png; sourceTree = "<group>"; };
 		43B749061B30524500136931 /* Button_Normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button_Normal.png; sourceTree = "<group>"; };
@@ -390,6 +406,10 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4320A9391B3CE74200F71F5C /* kuang.png */,
+				4320A93A1B3CE74200F71F5C /* touxiang.png */,
+				4320A93B1B3CE74200F71F5C /* xue_back.png */,
+				4320A93C1B3CE74200F71F5C /* xue_fore.png */,
 				4320A9321B3C382B00F71F5C /* 12.png */,
 				4320A9211B3BEF7500F71F5C /* attack1_animation.plist */,
 				4320A9221B3BEF7500F71F5C /* attack1_animation.png */,
@@ -429,6 +449,8 @@
 				43DEA0301B32F6CE00E73929 /* HRocker.h */,
 				4320A92D1B3C29D600F71F5C /* IMap.cpp */,
 				4320A92E1B3C29D600F71F5C /* IMap.h */,
+				4320A9351B3CDF6D00F71F5C /* HpProgress.cpp */,
+				4320A9361B3CDF6D00F71F5C /* HpProgress.h */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -592,17 +614,20 @@
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
+				4320A9431B3CE74200F71F5C /* xue_fore.png in Resources */,
 				43B749361B324F5900136931 /* background_1.jpg in Resources */,
 				46880B8119C43A67006E1F66 /* HelloWorld.png in Resources */,
 				43B749171B30524500136931 /* Button_Normal.png in Resources */,
 				43B749211B30524500136931 /* CheckBoxNode_Disable.png in Resources */,
 				46880B7D19C43A67006E1F66 /* CloseSelected.png in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
+				4320A9411B3CE74200F71F5C /* xue_back.png in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
 				521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */,
 				521A8EA919F11F5000D177D7 /* fonts in Resources */,
 				43B749271B30524500136931 /* Marker Felt.ttf in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
+				4320A93D1B3CE74200F71F5C /* kuang.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
@@ -612,6 +637,7 @@
 				43B749131B30524500136931 /* back.jpg in Resources */,
 				43DEA02D1B32F6B900E73929 /* zhaoyun.png in Resources */,
 				4320A9331B3C382B00F71F5C /* 12.png in Resources */,
+				4320A93F1B3CE74200F71F5C /* touxiang.png in Resources */,
 				3EACC98F19EE6D4300EB3C5E /* res in Resources */,
 				43B7491D1B30524500136931 /* CheckBox_Normal.png in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
@@ -637,7 +663,9 @@
 				4320A92A1B3BEF7500F71F5C /* run_animation.plist in Resources */,
 				46880B8219C43A67006E1F66 /* HelloWorld.png in Resources */,
 				4320A9281B3BEF7500F71F5C /* attack1_animation.png in Resources */,
+				4320A9401B3CE74200F71F5C /* touxiang.png in Resources */,
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
+				4320A9421B3CE74200F71F5C /* xue_back.png in Resources */,
 				43B749371B324F5900136931 /* background_1.jpg in Resources */,
 				43B749201B30524500136931 /* CheckBox_Press.png in Resources */,
 				43B7492C1B30524500136931 /* .gitkeep in Resources */,
@@ -649,6 +677,7 @@
 				43B7491E1B30524500136931 /* CheckBox_Normal.png in Resources */,
 				43B749161B30524500136931 /* Button_Disable.png in Resources */,
 				4320A92C1B3BEF7500F71F5C /* run_animation.png in Resources */,
+				4320A93E1B3CE74200F71F5C /* kuang.png in Resources */,
 				4320A9341B3C382B00F71F5C /* 12.png in Resources */,
 				43B749141B30524500136931 /* back.jpg in Resources */,
 				43DEA02E1B32F6B900E73929 /* zhaoyun.png in Resources */,
@@ -658,6 +687,7 @@
 				43B749181B30524500136931 /* Button_Normal.png in Resources */,
 				43B7491A1B30524500136931 /* Button_Press.png in Resources */,
 				43DEA02A1B32F6B900E73929 /* Direction_bc.png in Resources */,
+				4320A9441B3CE74200F71F5C /* xue_fore.png in Resources */,
 				43B749261B30524500136931 /* arial.ttf in Resources */,
 				43B749221B30524500136931 /* CheckBoxNode_Disable.png in Resources */,
 				43B749281B30524500136931 /* Marker Felt.ttf in Resources */,
@@ -671,6 +701,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4320A9371B3CDF6D00F71F5C /* HpProgress.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				43DEA0311B32F6CE00E73929 /* HRocker.cpp in Sources */,
@@ -691,6 +722,7 @@
 				43B749301B30526900136931 /* MainScene.cpp in Sources */,
 				43DEA0321B32F6CE00E73929 /* HRocker.cpp in Sources */,
 				43B749341B324E3300136931 /* GameScene.cpp in Sources */,
+				4320A9381B3CDF6D00F71F5C /* HpProgress.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 				4320A9301B3C29D600F71F5C /* IMap.cpp in Sources */,
 				43B7493B1B32594D00136931 /* Hero.cpp in Sources */,
