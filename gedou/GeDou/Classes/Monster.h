@@ -64,12 +64,60 @@ public:
     
     CREATE_FUNC(Monster);
     
+    /**
+     *  可视范围内，怪物跟随英雄运动
+     *
+     *  @param m_hero m_hero description
+     *  @param m_map  <#m_map description#>
+     */
+    void followRun(Node* m_hero, Node* m_map);
+    /**
+     *  判断是否攻击
+     */
+    void judegeAttack();
+    /**
+     *  怪物巡逻路线
+     */
+    void monsterSeeRun();
+    /**
+     *  启动英雄监听器
+     *
+     *  @param m_hero <#m_hero description#>
+     *  @param m_map  <#m_map description#>
+     */
+    void startListen(Node* m_hero, Node* m_map);
+    /**
+     *  每隔3秒检测一下，计算英雄与怪物的距离
+     *
+     *  @param delta <#delta description#>
+     */
+    void updateMonster(float delta);
+    /**
+     *  更新函数，如果英雄在可视范围内，不断触发
+     *
+     *  @param delta <#delta description#>
+     */
+    void update(float delta);
+    
 private:
     Sprite* m_monster_sprite;
     
     const char *monster_name;
     
     HpProgressView* monster_xue;
+    
+    /**
+     *  当前英雄
+     */
+    Node* my_hero;
+    /**
+     *  当前地图
+     */
+    Node* my_map;
+    /**
+     *  当前怪物和英雄的距离
+     */
+    float dis;
 };
 
 #endif /* defined(__GeDou__Monster__) */

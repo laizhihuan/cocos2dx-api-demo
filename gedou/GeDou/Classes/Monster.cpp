@@ -21,6 +21,73 @@ Monster::~Monster()
 {
 }
 
+void Monster::followRun(cocos2d::Node *m_hero, cocos2d::Node *m_map)
+{
+    //得到两点x的距离
+    float x = m_hero->getPositionX() - (this->getPositionX() + m_map->getPositionX());
+    //得到两点y的距离
+    float y = m_hero->getPositionY() - (this->getPositionY() + m_map->getPositionY());
+    
+    //先计算怪物和英雄的距离
+    dis = sqrt(pow(x, 2)+pow(y, 2));
+    
+    if (dis >= 300) {
+        return;
+    }
+    
+    if (dis <= 100) {
+        this -> stopAnimation();
+        judegeAttack();
+        return;
+    }
+    
+    //判断怪物横坐标和英雄的距离
+    if (x < -100) {
+        monsterDirection = true;
+        //设置方向
+        m_monster_sprite -> setFlippedX(monsterDirection);
+        
+        if (isAttack) {
+            return;
+        }
+        
+        //设置怪物向英雄移动
+        this->setPosition(this->getPositionX()-1, this->getPositionY());
+        //播放动画
+        this->setAnimation("monster_run", 6, monsterDirection);
+    }
+    else if (x > 100)
+    {
+        monsterDirection = false;
+        m_monster_sprite->setFlippedX(monsterDirection); //设置方向
+        if (isAttack) {
+            return;
+        }
+        this->setPosition(this->getPositionX()+1,this->getPositionY());
+        this->setAnimation("monster_run", 6, monsterDirection);
+    }
+    else if (x <= 100 || x > -100)
+    {
+        if (m_hero->getPositionY() > this->getPositionY()) {
+            m_monster_sprite->setFlippedX(monsterDirection);
+            if (isAttack) {
+                return;
+            }
+            this->setPosition(this->getPositionX(), this->getPositionY()+1);
+            this->setAnimation("monster_run", 6, monsterDirection);
+        }
+        else if (m_hero->getPositionY() < this->getPositionY())
+        {
+            m_monster_sprite->setFlippedX(monsterDirection);
+            if (isAttack) {
+                return;
+            }
+            this->setPosition(this->getPositionX(), this->getPositionY()+1);
+            this->setAnimation("monster_run", 6, monsterDirection);
+        }
+    }
+}
+
 void Monster::initMonsterSprite(const char *monsterName)
 {
     this->monster_name = monsterName;
