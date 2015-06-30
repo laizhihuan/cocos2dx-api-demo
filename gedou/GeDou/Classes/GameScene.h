@@ -33,6 +33,15 @@ public:
      *  @param delta 每帧时间间隔
      */
     virtual void update(float delta);
+    /**
+     *  碰撞检测,就是查看两个精灵所在的位置有没有重叠
+     *
+     *  @param rect1 精灵1的位置矩形
+     *  @param rect2 精灵2的位置矩形
+     *
+     *  @return 如果碰撞返回true,否则返回false
+     */
+    bool isRectCollision(Rect rect1, Rect rect2);
     
 private:
     Hero* hero;      //添加英雄

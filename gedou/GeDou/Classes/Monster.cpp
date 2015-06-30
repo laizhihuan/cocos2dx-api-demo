@@ -237,6 +237,91 @@ void Monster::attackEnd()
     isAttack = false;
 }
 
+void Monster::hurtAnimation(const char *name_each,const unsigned int num, bool runDirect)
+{
+    if (isHurt || isDead) {
+        return;
+    }
+    
+    if (isRunning || isAttack) {
+        m_monster_sprite->stopAllActions(); //当前精灵停止所有的动画
+        //恢复
+        this->removeChild(m_monster_sprite,true); //把原来的精灵删掉
+        
+        m_monster_sprite=Sprite::create(monster_name); //恢复精灵原来的贴图样子
+        this->addChild(m_monster_sprite);
+        
+        isRunning = false;
+        isAttack = false;
+    }
+    
+    auto ani = getAnimation(name_each, num, runDirect);
+    auto action = Animate::create(ani);
+    
+    auto ccBack = CallFunc::create(CC_CALLBACK_0(Monster::hurtEnd, this));
+    auto act = Sequence::create(action,ccBack,NULL);
+    m_monster_sprite->runAction(act);
+    
+    isHurt = true;
+}
+
+void Monster::hurtEnd()
+{
+    isHurt = false;
+    monster_xue->setCurrentProgress(monster_xue->getCurrentProgress() - 10);
+    if (monster_xue -> getCurrentProgress() == 0) {
+        //播放怪物死亡动画
+        
+    }
+}
+
+void Monster::deadAnimation(const char *name_each, const unsigned int num, bool runDirect)
+{
+    isDead = true;
+    auto ani = getAnimation(name_each, num, runDirect);
+    auto action = Animate::create(ani);
+ 
+    auto ccBack = CallFunc::create(CC_CALLBACK_0(Monster::deadEnd, this));
+    auto act = Sequence::create(action,ccBack,NULL);
+    m_monster_sprite->runAction(act);
+}
+
+void Monster::deadEnd()
+{
+    //恢复死亡的样子
+    this->removeChild(m_monster_sprite,true);
+    m_monster_sprite=Sprite::create("monster_dead2.png"); //恢复死亡的样子
+    m_monster_sprite->setFlippedX(monsterDirection);
+    this->addChild(m_monster_sprite);
+    
+    //存在血条
+    if (monster_xue != NULL) {
+        if (monsterDirection)
+        {
+            monster_xue->setPosition(Vec2(m_monster_sprite->getPositionX() + 60, m_monster_sprite->getPositionY()));
+        }
+        else
+        {
+            monster_xue->setPosition(Vec2(m_monster_sprite->getPositionX() - 60, m_monster_sprite->getPositionY()));
+        }
+    }
+    
+    //怪物闪
+    Blink* blinkact = Blink::create(3, 6);
+    
+    CallFunc* callFunc = CallFunc::create(CC_CALLBACK_0(Monster::blinkEnd, this));
+    
+    ActionInterval* deadact = Sequence::create(blinkact, callFunc,NULL);
+    
+    m_monster_sprite -> runAction(deadact);
+}
+
+void Monster::blinkEnd()
+{
+    //删除怪物和血条
+    this->removeAllChildren();
+}
+
 void Monster::stopAnimation()
 {
     if (!isRunning) {

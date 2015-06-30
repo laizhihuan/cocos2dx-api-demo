@@ -50,6 +50,39 @@ public:
      */
     void attackEnd();
     
+    /**
+     *  攻击动画
+     */
+    void hurtAnimation(const char *name_each,const unsigned int num, bool runDirect);
+    
+    /**
+     *  攻击动画结束
+     */
+    void hurtEnd();
+    
+    /**
+     *  判断是否在受伤
+     */
+    bool isHurt;
+    
+    /**
+     *  攻击动画
+     */
+    void deadAnimation(const char *name_each,const unsigned int num, bool runDirect);
+    /**
+     *  攻击动画结束
+     */
+    void deadEnd();
+    /**
+     *  判断是否在受伤
+     */
+    bool isDead;
+
+    /**
+     *  怪物死亡
+     */
+    void blinkEnd();
+    
     bool judgePostion(Size visibleSize);
     
     void runEnd();

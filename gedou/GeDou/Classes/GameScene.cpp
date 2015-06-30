@@ -8,6 +8,37 @@
 
 #include "GameScene.h"
 
+bool GameScene::isRectCollision(cocos2d::Rect rect1, cocos2d::Rect rect2)
+{
+    //矩形1中心点和宽高
+    float x1 = rect1.origin.x;
+    float y1 = rect1.origin.y;
+    float w1 = rect1.size.width;
+    float h1 = rect1.size.height;
+    
+    float x2 = rect2.origin.x;
+    float y2 = rect2.origin.y;
+    float w2 = rect2.size.width;
+    float h2 = rect2.size.height;
+    
+    if (x1 + w1 * 0.5 < x2 - w2 * 0.5) {
+        return false;
+    }
+    else if (x1 - w1 * 0.5 > x2 + w2 * 0.5) {
+        return false;
+    }
+    else if (y1 + h1 * 0.5 < y2 - h2*0.5) {
+        return false;
+    }
+    else if (y1 - h1 * 0.5 > y2 + h2 * 0.5)
+    {
+        return false;
+    }
+    
+    return true;
+}
+
+
 Scene* GameScene::createScene()
 {
     Scene *scene = Scene::create();
@@ -97,7 +128,7 @@ void GameScene::update(float delta)
             //不让精灵超出右边，
             if (hero->getPositionX()<=visibleSize.width - 8) {
                 if (!hero->judgePostion(visibleSize) || node_map->judgeMap(hero, visibleSize)) {
-                    hero->setPosition(Vec2(hero->getPosition().x+1, hero->getPosition().y));
+                    hero->setPosition(Vec2(hero->getPosition().x+2, hero->getPosition().y));
                 }
                 node_map->moveMap(hero, visibleSize);
             }
@@ -106,7 +137,7 @@ void GameScene::update(float delta)
         case 2:
             hero->setAnimation("hero_run", 8, rocker->rockerRun);
             //向上走
-            hero->setPosition(Vec2(hero->getPosition().x,hero->getPosition().y+1));
+            hero->setPosition(Vec2(hero->getPosition().x,hero->getPosition().y+2));
             break;
         case 3:
             hero->setAnimation("hero_run", 8, rocker->rockerRun);
@@ -131,4 +162,27 @@ void GameScene::update(float delta)
         hero->attackAnimation("hero_attack", 6, rocker->rockerRun);
         log("attack----->");
     }
+    
+    if (hero -> isAttack) {
+        log("hero attack ....");
+        
+        //怪物和英雄应该在一个差不多的水平高度上，攻击才有效
+        bool isValidAttack = abs(hero->getPositionY() - monster_1->getPositionY()) < 30;
+        
+        if (isValidAttack) {
+            
+            log("is valid attack");
+            
+            auto hero_rect=Rect::Rect(hero->getPositionX(),hero->getPositionY(), hero->getContentSize().width-70, hero->getContentSize().height-30);
+            auto monster_rect=Rect::Rect(monster_1->getPositionX(),monster_1->getPositionY(),hero->getContentSize().width-30,monster_1->getContentSize().height - 20);
+            
+            if (this->isRectCollision(hero_rect,monster_rect)) {
+                log("hero attack ....monster");
+                //怪物受伤
+                monster_1->hurtAnimation("monster_run",6,monster_1->monsterDirection);
+            }
+            
+        }
+    }
+    
 }
