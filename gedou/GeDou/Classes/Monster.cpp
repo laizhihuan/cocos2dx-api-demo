@@ -82,7 +82,7 @@ void Monster::followRun(cocos2d::Node *m_hero, cocos2d::Node *m_map)
             if (isAttack) {
                 return;
             }
-            this->setPosition(this->getPositionX(), this->getPositionY()+1);
+            this->setPosition(this->getPositionX(), this->getPositionY()-1);
             this->setAnimation("monster_run", 6, monsterDirection);
         }
     }

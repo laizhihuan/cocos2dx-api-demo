@@ -51,7 +51,9 @@ bool GameScene::init()
     monster_1 = Monster::create();
     monster_1->initMonsterSprite("monster.png","xue_back.png","xue_fore.png");
     monster_1->setPosition(Vec2(visibleSize.width-100, visibleSize.height/2-100));
-    this->addChild(monster_1,1);
+    //this->addChild(monster_1,1);
+    node_map->addChild(monster_1);
+    monster_1->startListen(hero, node_map);
     
     //添加摇杆
     rocker = HRocker::createHRocker("Direction_bt.png", "Direction_bc.png", Vec2(110,60));
