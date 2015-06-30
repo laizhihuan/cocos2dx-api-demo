@@ -88,6 +88,69 @@ void Monster::followRun(cocos2d::Node *m_hero, cocos2d::Node *m_map)
     }
 }
 
+void Monster::judegeAttack()
+{
+    int x = random(0,100);
+    log("attack----->%d",x);
+    if (x>50) {
+        this->attackAnimation("monster_attack", 5, monsterDirection);
+    }
+}
+
+void Monster::monsterSeeRun()
+{
+    if (dis < 300) {
+        return;
+    }
+    
+    this->setAnimation("monster_run", 6, monsterDirection);
+    
+    MoveBy *moveBy1;
+    
+    if (monsterDirection == true) {
+        moveBy1 = MoveBy::create(1, Vec2(-70, 0));
+    } else {
+        moveBy1 = MoveBy::create(1, Vec2(70,0));
+    }
+    
+    auto callFunc = CallFunc::create(CC_CALLBACK_0(Monster::stopAnimation, this));
+    //创建连续动作
+    auto xunluo = Sequence::create(moveBy1, callFunc, NULL);
+    this->runAction(xunluo);
+}
+
+void Monster::startListen(cocos2d::Node *m_hero, cocos2d::Node *m_map)
+{
+    my_hero = m_hero;
+    my_map = m_map;
+    this->schedule(schedule_selector(Monster::updateMonster), 3.0f);
+    this->scheduleUpdate();
+}
+
+void Monster::updateMonster(float delta)
+{
+    //得到两点x的距离,当hero移动的屏幕一般的时候，hero就只是做移动的动作，而真正移动的是map,如果比较hero和monster的距离，是出错的
+    float x = my_hero->getPositionX() - (this->getPositionX() + my_map->getPositionX());
+    //得到两点y的距离
+    float y = my_hero->getPositionY() - (this->getPositionY() + my_map->getPositionY());
+    
+    //先计算怪物和英雄的距离
+    dis = sqrt(pow(x, 2)+pow(y, 2));
+    
+    if (dis >= 300) {
+        if (!isRunning) {
+            monsterSeeRun();
+        }
+    }
+}
+
+void Monster::update(float delta)
+{
+    if (dis<300) {
+        followRun(my_hero, my_map);
+    }
+}
+
 void Monster::initMonsterSprite(const char *monsterName)
 {
     this->monster_name = monsterName;
