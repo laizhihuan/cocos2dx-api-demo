@@ -22,7 +22,7 @@ public:
      *
      *  @return ai的棋子下一步
      */
-    Step* genStep(SceneGame* game);
+    Step* genStep(SceneGame* game, int level);
     /**
      *  所有可能的走法
      *
@@ -53,6 +53,14 @@ public:
      *  @return <#return value description#>
      */
     int calcScore(SceneGame* game);
+    
+    /**
+     *  假移动的step
+     */
+    Step* _step;
+    int _level;
+    int getMaxScore(SceneGame* game, int level);
+    int getMinScore(SceneGame* game, int level);
     
 };
 

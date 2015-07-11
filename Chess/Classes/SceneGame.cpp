@@ -6,6 +6,7 @@
 //
 //
 #include "SceneGame.h"
+#include "AI.h"
 
 Scene* SceneGame::createScene(bool isRed)
 {
@@ -32,6 +33,19 @@ SceneGame* SceneGame::create(bool isRed)
     }
     
     return pRet;
+}
+
+void SceneGame::onEnter()
+{
+    Layer::onEnter();
+    _steps = CCArray::create();
+    _steps->retain();
+}
+
+void SceneGame::onExit()
+{
+    Layer::onExit();
+    _steps->release();
 }
 
 bool SceneGame::init(bool red)
@@ -184,9 +198,26 @@ void SceneGame::moveStone(Touch *touch)
     if (tagetId != -1) {
         _stone[tagetId]->_dead=true;
         _stone[tagetId]->setVisible(false);
+        
+        //检查游戏是否
+        checkGameOver(tagetId);
     }
     
     _redTurn = !_redTurn;
+    
+    // 黑棋加入AI
+    if (!_redTurn) {
+        Step* step = _ai->genStep(this, 4);
+        _stone[step->_moveid]->move(step->_rowTo, step->_colTo);
+        
+        if (step->_killid != -1) {
+            _stone[step->_killid]->_dead = true;
+            _stone[step->_killid]->setVisible(false);
+        }
+        
+        _redTurn = !_redTurn;
+        _steps->addObject(step);
+    }
 }
 
 void SceneGame::regret(CCObject*)
@@ -484,3 +515,14 @@ void SceneGame::onTouchEnded(Touch *touch, Event *unused_event)
 void SceneGame::onTouchCancelled(Touch *touch, Event *unused_event)
 {
 }
+
+void SceneGame::checkGameOver(int killid)
+{
+    Stone* stone = _stone[killid];
+    if (stone->_type == Stone::JIANG) {
+        //红棋黑棋位置对调
+        
+        Director::getInstance()->replaceScene(CreateScene(SceneGame::create(true)));
+    }
+}
+

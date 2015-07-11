@@ -16,6 +16,8 @@
 #include "Step.h"
 USING_NS_CC;
 
+class AI;
+
 class SceneGame : public Layer
 {
 public:
@@ -136,26 +138,29 @@ public:
     /**
      *  纪录走棋信息
      */
-    Array* _steps;
+    CCArray* _steps;
     
-    void onEnter()
-    {
-        Layer::onEnter();
-        _steps = Array::create();
-        _steps->retain();
-    }
-    
-    void onExit()
-    {
-        Layer::onExit();
-        _steps->release();
-    }
     /**
      *  悔棋操作
      */
     void regret(CCObject*);
     
     void initRegretButton();
+    /**
+     *  添加黑棋AI
+     */
+    AI* _ai;
+    /**
+     *  检查游戏
+     *
+     *  @param killid <#killid description#>
+     */
+    void checkGameOver(int killid);
+    
+    void onEnter();
+    
+    void onExit();
+    
 };
 
 #endif /* defined(__Chess__SceneGame__) */
