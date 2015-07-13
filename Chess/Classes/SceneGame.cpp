@@ -205,18 +205,18 @@ void SceneGame::moveStone(Touch *touch)
     
     _redTurn = !_redTurn;
     
-    // 黑棋加入AI
+    // 黑棋加入AI, TODO:AI没有完善需要进一步调试，完善
     if (!_redTurn) {
-        Step* step = _ai->genStep(this, 4);
-        _stone[step->_moveid]->move(step->_rowTo, step->_colTo);
+        //Step* step = _ai->genStep(this, 4);
+        //_stone[step->_moveid]->move(step->_rowTo, step->_colTo);
+        //
+        //if (step->_killid != -1) {
+        //    _stone[step->_killid]->_dead = true;
+        //    _stone[step->_killid]->setVisible(false);
+        //}
         
-        if (step->_killid != -1) {
-            _stone[step->_killid]->_dead = true;
-            _stone[step->_killid]->setVisible(false);
-        }
-        
-        _redTurn = !_redTurn;
-        _steps->addObject(step);
+        //_redTurn = !_redTurn;
+        //_steps->addObject(step);
     }
 }
 
