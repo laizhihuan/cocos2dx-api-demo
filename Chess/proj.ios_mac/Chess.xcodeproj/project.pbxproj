@@ -24,6 +24,8 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		4322FC9D1B5355F000F7EC21 /* Net.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4322FC9B1B5355F000F7EC21 /* Net.cpp */; };
+		4322FC9E1B5355F000F7EC21 /* Net.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4322FC9B1B5355F000F7EC21 /* Net.cpp */; };
 		43B748121AFC3FB200136931 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 43B747E51AFC3FB200136931 /* background.png */; };
 		43B748131AFC3FB200136931 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 43B747E51AFC3FB200136931 /* background.png */; };
 		43B748141AFC3FB200136931 /* bche.png in Resources */ = {isa = PBXBuildFile; fileRef = 43B747E61AFC3FB200136931 /* bche.png */; };
@@ -324,6 +326,8 @@
 		1D6058910D05DD3D006BFB54 /* Chess iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chess iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4322FC9B1B5355F000F7EC21 /* Net.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Net.cpp; path = ../Classes/Net.cpp; sourceTree = "<group>"; };
+		4322FC9C1B5355F000F7EC21 /* Net.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Net.h; path = ../Classes/Net.h; sourceTree = "<group>"; };
 		43B747E51AFC3FB200136931 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		43B747E61AFC3FB200136931 /* bche.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bche.png; sourceTree = "<group>"; };
 		43B747E71AFC3FB200136931 /* bjiang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bjiang.png; sourceTree = "<group>"; };
@@ -502,6 +506,8 @@
 				43B7487D1B0DBB2000136931 /* Step.h */,
 				43B748801B0F413E00136931 /* AI.cpp */,
 				43B748811B0F413E00136931 /* AI.h */,
+				4322FC9B1B5355F000F7EC21 /* Net.cpp */,
+				4322FC9C1B5355F000F7EC21 /* Net.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -969,6 +975,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4322FC9D1B5355F000F7EC21 /* Net.cpp in Sources */,
 				43B7487E1B0DBB2000136931 /* Step.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
@@ -992,6 +999,7 @@
 				43B748731B003DE900136931 /* Common.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 				43B748771B01DCFC00136931 /* SceneGame.cpp in Sources */,
+				4322FC9E1B5355F000F7EC21 /* Net.cpp in Sources */,
 				43B7487B1B02DCF200136931 /* Stone.cpp in Sources */,
 				43B7487F1B0DBB2000136931 /* Step.cpp in Sources */,
 			);
